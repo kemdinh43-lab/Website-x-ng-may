@@ -1468,6 +1468,34 @@ h6 {
   }
 }
 
+/* ---------- Profile Intro Grid ---------- */
+.profile-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.profile-intro-image {
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid var(--clr-border);
+}
+
+.profile-intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media(max-width:768px) {
+  .profile-intro-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
 /* ---------- Video Section ---------- */
 .video-thumb {
   position: relative;
