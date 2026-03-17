@@ -4,323 +4,945 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Áo Phản Quang Công Trình | BảoHộ Pro — Chi Tiết Sản Phẩm</title>
-    <meta name="description"
-        content="Áo phản quang công trình vải kaki 65/35, phản quang 3M, đường may 2 kim. Size S–XXL. Nhận báo giá B2B.">
+    <title>Áo Phản Quang Công Trình | Dương Thành Tín — Xưởng Đồng Phục B2B</title>
+    <meta name="description" content="Áo phản quang công trình vải kaki 65/35, phản quang 3M, đường may 2 kim. Sản xuất theo yêu cầu từ 20 bộ. Nhận báo giá B2B ngay.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* ========= BREADCRUMB ========= */
+        .ha-breadcrumb {
+            background: #f7f7f7;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+        .ha-breadcrumb__inner {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 13px;
+            color: #999;
+        }
+        .ha-breadcrumb__inner a { color: #999; text-decoration: none; }
+        .ha-breadcrumb__inner a:hover { color: #0F2A44; }
+        .ha-breadcrumb__inner .sep { margin: 0 5px; }
+        .ha-breadcrumb__inner .cur { color: #555; }
+
+        /* ========= MAIN PRODUCT AREA ========= */
+        .ha-product-wrap {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 24px 20px 40px;
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        /* --- GALLERY --- */
+        .ha-gallery {}
+        .ha-gallery__main {
+            position: relative;
+            width: 100%;
+            background: #f5f5f5;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: zoom-in;
+        }
+        .ha-gallery__main img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .ha-gallery__main:hover img { transform: scale(1.04); }
+        .ha-gallery__badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: #F37021;
+            color: white;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 3px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+        .ha-gallery__thumbs {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .ha-gallery__thumb {
+            flex: 1;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border-radius: 3px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .ha-gallery__thumb.active { border-color: #0F2A44; }
+        .ha-gallery__thumb:hover { border-color: #F37021; }
+        .ha-gallery__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        /* Dot indicators like Hải Anh */
+        .ha-gallery__dots {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .ha-gallery__dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .ha-gallery__dot.active { background: #0F2A44; }
+
+        /* --- PRODUCT INFO (RIGHT) --- */
+        .ha-info {}
+
+        .ha-info__title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        /* Rating bar */
+        .ha-info__rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .ha-stars { display: flex; gap: 2px; }
+        .ha-stars svg { fill: #fbbf24; width: 14px; height: 14px; }
+        .ha-info__rating-text { font-size: 13px; color: #888; }
+
+        /* Features in green check box */
+        .ha-features-box {
+            background: #f9fafb;
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+        }
+        .ha-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            padding: 5px 0;
+            font-size: 13.5px;
+            color: #333;
+            line-height: 1.5;
+        }
+        .ha-feature-item svg { flex-shrink: 0; margin-top: 2px; color: #16a34a; }
+
+        /* Price */
+        .ha-price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 18px;
+            padding: 12px 0;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .ha-price-label { font-size: 13px; color: #888; }
+        .ha-price-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            color: #0F2A44;
+            letter-spacing: -0.5px;
+        }
+        .ha-price-note { font-size: 12px; color: #F37021; font-weight: 600; }
+
+        /* CTA Buttons */
+        .ha-cta-primary {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px 20px;
+            background: #F37021;
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: background 0.25s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .ha-cta-primary:hover { background: #e06010; transform: translateY(-2px); }
+        .ha-cta-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 13px 20px;
+            background: white;
+            color: #0F2A44;
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 4px;
+            border: 2px solid #0F2A44;
+            cursor: pointer;
+            text-decoration: none;
+            margin-bottom: 18px;
+            transition: all 0.25s;
+        }
+        .ha-cta-secondary:hover { background: #0F2A44; color: white; }
+
+        /* Note */
+        .ha-note {
+            font-size: 12.5px;
+            color: #666;
+            line-height: 1.7;
+            background: #fff8f5;
+            border-left: 3px solid #F37021;
+            padding: 10px 14px;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 16px;
+        }
+
+        /* USP mini list */
+        .ha-usp {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .ha-usp-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 13px;
+            color: #444;
+            background: #f5f7fa;
+            padding: 9px 12px;
+            border-radius: 6px;
+        }
+        .ha-usp-item svg { color: #F37021; flex-shrink: 0; }
+
+        /* ========= TAB NAVIGATION ========= */
+        .ha-tabs-nav {
+            position: sticky;
+            top: 72px;
+            background: white;
+            border-bottom: 2px solid #eee;
+            z-index: 100;
+        }
+        .ha-tabs-nav__inner {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+        }
+        .ha-tab-btn {
+            padding: 14px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #777;
+            border: none;
+            background: none;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-family: 'Outfit', sans-serif;
+            transition: color 0.2s;
+        }
+        .ha-tab-btn:hover { color: #0F2A44; }
+        .ha-tab-btn.active {
+            color: #0F2A44;
+            border-bottom-color: #F37021;
+            font-weight: 700;
+        }
+        .ha-tab-panel { display: none; }
+        .ha-tab-panel.active { display: block; }
+
+        /* ========= CONTENT SECTIONS ========= */
+        .ha-content-wrap {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 40px 20px 52px;
+        }
+
+        /* Highlights - image left + text right like reference */
+        .ha-content-split {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .ha-content-split img {
+            width: 100%;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        .ha-content-split h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: #0F2A44;
+            margin-bottom: 16px;
+        }
+        .ha-check-list {
+            list-style: none;
+            padding: 0;
+        }
+        .ha-check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 14.5px;
+            color: #333;
+            line-height: 1.6;
+        }
+        .ha-check-list .ck {
+            width: 20px; height: 20px;
+            background: #16a34a;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; margin-top: 2px;
+        }
+        .ha-check-list .ck svg { width: 11px; height: 11px; }
+
+        /* Table of contents box like reference */
+        .ha-toc {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin-bottom: 28px;
+            background: #fafafa;
+        }
+        .ha-toc__title { font-size: 14px; font-weight: 700; color: #0F2A44; margin-bottom: 10px; }
+        .ha-toc__list { list-style: none; }
+        .ha-toc__list li { margin-bottom: 6px; }
+        .ha-toc__list a { font-size: 13px; color: #0F2A44; text-decoration: none; display: flex; align-items: center; gap: 6px; }
+        .ha-toc__list a:hover { color: #F37021; }
+
+        /* Specs table */
+        .ha-spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .ha-spec-table tr { border-bottom: 1px solid #eee; }
+        .ha-spec-table tr:hover td { background: #fafafa; }
+        .ha-spec-table td {
+            padding: 13px 18px;
+            vertical-align: top;
+        }
+        .ha-spec-table td:first-child {
+            font-weight: 600;
+            color: #0F2A44;
+            width: 200px;
+            background: #f8fafb;
+        }
+        .ha-spec-table td:last-child { color: #444; }
+
+        /* Policy cards */
+        .ha-policy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .ha-policy-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 24px 20px;
+            text-align: center;
+        }
+        .ha-policy-card__icon {
+            width: 52px; height: 52px;
+            background: rgba(243,112,33,0.1);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 14px;
+        }
+        .ha-policy-card__icon svg { color: #F37021; }
+        .ha-policy-card h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700; color: #0F2A44;
+            margin-bottom: 8px; font-size: 15px;
+        }
+        .ha-policy-card p { font-size: 13px; color: #666; line-height: 1.6; }
+
+        /* FAQ Accordion */
+        .ha-faq { max-width: 860px; }
+        .ha-faq__item {
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+        .ha-faq__header {
+            width: 100%;
+            background: white;
+            border: none;
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            color: #0F2A44;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            transition: background 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .ha-faq__header:hover { background: #f9f9f9; }
+        .ha-faq__header.open { color: #F37021; background: #fff8f5; }
+        .ha-faq__icon {
+            width: 22px; height: 22px;
+            border: 1.5px solid #ccc;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .ha-faq__header.open .ha-faq__icon { transform: rotate(45deg); border-color: #F37021; }
+        .ha-faq__body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .ha-faq__body.open { max-height: 200px; }
+        .ha-faq__body-inner {
+            padding: 14px 20px 18px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        /* ========= RELATED PRODUCTS ========= */
+        .ha-related {
+            background: #f8f5f0;
+            padding: 56px 0;
+        }
+        .ha-related__inner {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .ha-related__header { margin-bottom: 28px; }
+        .ha-related__header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px; font-weight: 800;
+            color: #0F2A44; text-transform: uppercase; margin-bottom: 6px;
+        }
+        .ha-related__header p { color: #888; font-size: 14px; }
+        .ha-related__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .ha-rel-card {
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex; flex-direction: column;
+        }
+        .ha-rel-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .ha-rel-card__img {
+            position: relative;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+        }
+        .ha-rel-card__img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+        .ha-rel-card:hover .ha-rel-card__img img { transform: scale(1.05); }
+        .ha-rel-badge {
+            position: absolute; top: 8px; left: 8px;
+            font-size: 10px; font-weight: 800;
+            padding: 3px 7px; border-radius: 3px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .ha-rel-badge--hot { background: #F37021; color: white; }
+        .ha-rel-badge--new { background: #0F2A44; color: white; }
+        .ha-rel-card__info { padding: 14px; flex: 1; display: flex; flex-direction: column; }
+        .ha-rel-card__title {
+            font-size: 14px; font-weight: 600; color: #1a1a1a;
+            line-height: 1.4; margin-bottom: 6px;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .ha-rel-card__sub { font-size: 12px; color: #999; margin-bottom: auto; }
+        .ha-rel-card__price { font-size: 15px; font-weight: 700; color: #0F2A44; margin-top: 10px; }
+        .ha-rel-card__cta {
+            display: block; text-align: center;
+            background: #F37021; color: white;
+            font-size: 12px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            padding: 9px; border-radius: 0 0 4px 4px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .ha-rel-card__cta:hover { background: #e06010; }
+
+        /* ========= RESPONSIVE ========= */
+        @media (max-width: 960px) {
+            .ha-product-wrap { grid-template-columns: 1fr; }
+            .ha-content-split { grid-template-columns: 1fr; }
+            .ha-policy-grid { grid-template-columns: 1fr 1fr; }
+            .ha-related__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .ha-related__grid { grid-template-columns: repeat(2, 1fr); }
+            .ha-usp { grid-template-columns: 1fr; }
+            .ha-tabs-nav__inner { gap: 0; }
+            .ha-tab-btn { padding: 12px 16px; font-size: 13px; }
+        }
+    </style>
 </head>
 
 <body>
-
     <!-- HEADER -->
     <div id="header-container"></div>
-    <!-- PAGE HERO (Clean & B2B) -->
-    <section class="page-hero-product">
-        <div class="container">
-            <nav class="breadcrumb-b2b">
-                <a href="index.html">Trang chủ</a> <span class="separator">/</span>
-                <a href="category.html">Danh mục bảo hộ</a> <span class="separator">/</span>
-                <span class="active-page">Áo phản quang</span>
-            </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="ha-breadcrumb">
+        <div class="ha-breadcrumb__inner">
+            <a href="index.html">Trang chủ</a><span class="sep">›</span>
+            <a href="category.html">Sản phẩm</a><span class="sep">›</span>
+            <a href="category.html">Bảo hộ lao động</a><span class="sep">›</span>
+            <span class="cur">Áo phản quang công trình</span>
         </div>
-    </section>
+    </div>
 
-    <!-- PRODUCT DETAIL (3-COL LAYOUT) -->
-    <section class="product-detail-section">
-        <div class="container">
-            <div class="product-detail-container">
+    <!-- PRODUCT MAIN GRID -->
+    <div style="background:#fff; border-bottom: 1px solid #eee;">
+        <div class="ha-product-wrap">
 
-                <!-- COLUMN 1: GALLERY -->
-                <div class="product-gallery-column reveal reveal-left">
-                    <div class="product-gallery__main" id="mainImageContainer"
-                        style="overflow: hidden; aspect-ratio: 4/5; background: #f9f9f9;">
-                        <img src="images/product-main.png" alt="Áo phản quang công trình" id="mainProductImage"
-                            style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s ease;">
-                        <span class="product-card-new__tag tag-hot"
-                            style="top: 20px; left: 20px; background: #FFE9D6; color: var(--clr-primary);">HOT</span>
+            <!-- LEFT: GALLERY -->
+            <div class="ha-gallery">
+                <div class="ha-gallery__main" id="haMainWrap">
+                    <img src="images/product-main.png" alt="Áo phản quang công trình Dương Thành Tín" id="haMainImg" style="max-height: 560px; object-fit: cover;">
+                    <span class="ha-gallery__badge">HOT</span>
+                </div>
+                <div class="ha-gallery__thumbs">
+                    <div class="ha-gallery__thumb active" onclick="haSwitch(this,'images/product-main.png')">
+                        <img src="images/product-main.png" alt="Ảnh 1">
                     </div>
-                    <div class="product-gallery__thumbs" style="display: flex; gap: 12px; margin-top: 16px;">
-                        <div class="product-gallery__thumb active" onclick="switchGallery(this)"
-                            style="width: 80px; height: 80px; overflow: hidden; border: 2px solid var(--clr-accent); cursor: pointer;">
-                            <img src="images/product-main.png" alt="Áo phản quang mặt trước"
-                                style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="product-gallery__thumb" onclick="switchGallery(this)"
-                            style="width: 80px; height: 80px; overflow: hidden; border: 1px solid var(--clr-border); cursor: pointer;">
-                            <img src="images/product-pants.png" alt="Quần bảo hộ lao động đồng bộ"
-                                style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="product-gallery__thumb" onclick="switchGallery(this)"
-                            style="width: 80px; height: 80px; overflow: hidden; border: 1px solid var(--clr-border); cursor: pointer;">
-                            <img src="images/factory-3.png" alt="Chi tiết kỹ thuật đường may"
-                                style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    <div class="ha-gallery__thumb" onclick="haSwitch(this,'images/product-pants.png')">
+                        <img src="images/product-pants.png" alt="Ảnh 2">
+                    </div>
+                    <div class="ha-gallery__thumb" onclick="haSwitch(this,'images/factory-3.png')">
+                        <img src="images/factory-3.png" alt="Ảnh 3">
+                    </div>
+                    <div class="ha-gallery__thumb" onclick="haSwitch(this,'images/product-uniform.png')">
+                        <img src="images/product-uniform.png" alt="Ảnh 4">
+                    </div>
+                    <div class="ha-gallery__thumb" onclick="haSwitch(this,'images/product-winter.png')">
+                        <img src="images/product-winter.png" alt="Ảnh 5">
+                    </div>
+                </div>
+                <div class="ha-gallery__dots" id="haDots">
+                    <div class="ha-gallery__dot active"></div>
+                    <div class="ha-gallery__dot"></div>
+                    <div class="ha-gallery__dot"></div>
+                    <div class="ha-gallery__dot"></div>
+                    <div class="ha-gallery__dot"></div>
+                </div>
+            </div>
+
+            <!-- RIGHT: INFO -->
+            <div class="ha-info">
+                <h1 class="ha-info__title">Áo Phản Quang Công Trình Cao Cấp — Dải 3M, May Kỹ Thuật 2 Kim</h1>
+
+                <div class="ha-info__rating">
+                    <div class="ha-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="ha-info__rating-text">5.0 (36 đánh giá) · Mã: <strong>DTT-PRO-01</strong></span>
+                </div>
+
+                <!-- Feature checkboxes -->
+                <div class="ha-features-box">
+                    <div class="ha-feature-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Dải phản quang <strong>3M Scotchlite™</strong>, tầm nhìn xa 200m</span>
+                    </div>
+                    <div class="ha-feature-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Đường may <strong>2 kim, đánh bọ chịu lực</strong> tại 12 điểm</span>
+                    </div>
+                    <div class="ha-feature-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span>Vải Kaki TC 65/35 — <strong>240 GSM</strong>, cầm màu bền</span>
+                    </div>
+                    <div class="ha-feature-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span><strong>In/thêu logo</strong> theo yêu cầu từ 20 sản phẩm</span>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="ha-price-row">
+                    <div>
+                        <div class="ha-price-label">Giá sỉ từ</div>
+                        <div class="ha-price-value">Liên hệ</div>
+                        <div class="ha-price-note">Giá thay đổi theo số lượng &amp; chất liệu</div>
+                    </div>
+                    <div style="margin-left:auto; text-align:right;">
+                        <div style="font-size:12px; color:#888; margin-bottom:4px;">Chất liệu</div>
+                        <div style="display:flex; gap:6px;">
+                            <button style="padding:5px 10px; border:1px solid #0F2A44; border-radius:3px; background:#0F2A44; color:white; font-size:12px; cursor:pointer; font-weight:600;">Kaki 65/35</button>
+                            <button style="padding:5px 10px; border:1px solid #ddd; border-radius:3px; background:#fff; color:#555; font-size:12px; cursor:pointer;">PE nhẹ</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-info-column reveal reveal-up">
-                    <h1 class="product-title-main">Áo phản quang công trình Cao cấp</h1>
+                <!-- CTA -->
+                <a href="contact.html" class="ha-cta-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.93 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.84 2h3a2 2 0 012 1.72c.128.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.572 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    NHẬN BÁO GIÁ SỈ NGAY
+                </a>
+                <a href="https://zalo.me/0905123456" target="_blank" class="ha-cta-secondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    CHAT ZALO TƯ VẤN
+                </a>
 
-                    <div class="product-meta-stats">
-                        <span>Mã: PRO-SAF-01</span>
-                        <span>Chất liệu: Kaki 65/35</span>
-                        <span>Ứng dụng: Xây dựng / Nhà máy</span>
+                <div class="ha-note">
+                    ⚡ <strong>Phản hồi trong 2h làm việc</strong> · Xem mẫu thực tế tại xưởng KCN Hòa Khánh, Đà Nẵng · Xuất hóa đơn VAT đầy đủ
+                </div>
+
+                <!-- USP -->
+                <div class="ha-usp">
+                    <div class="ha-usp-item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Giao hàng toàn quốc
                     </div>
+                    <div class="ha-usp-item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Tư vấn size tận nơi
+                    </div>
+                    <div class="ha-usp-item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Bảo hành 6 tháng
+                    </div>
+                    <div class="ha-usp-item">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Xuất hóa đơn VAT
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <ul id="highlights" class="product-highlights-list">
-                        <li><span>✓</span> Phản quang 3M tiêu chuẩn EN ISO 20471</li>
-                        <li><span>✓</span> Đường may 2 kim, đánh bọ chịu lực cao</li>
-                        <li><span>✓</span> Vải cầm màu, không xù lông sau 50 lần giặt</li>
-                        <li><span>✓</span> Form dáng chuẩn B2B, chuyên nghiệp</li>
+    <!-- TABS NAV -->
+    <div class="ha-tabs-nav">
+        <div class="ha-tabs-nav__inner">
+            <button class="ha-tab-btn active" onclick="haTab(this,'ha-highlights')">Điểm nổi bật</button>
+            <button class="ha-tab-btn" onclick="haTab(this,'ha-specs')">Thông số kỹ thuật</button>
+            <button class="ha-tab-btn" onclick="haTab(this,'ha-policy')">Chính sách B2B</button>
+            <button class="ha-tab-btn" onclick="haTab(this,'ha-faq')">FAQ</button>
+        </div>
+    </div>
+
+    <!-- TAB CONTENTS -->
+    <div style="background:#fff; border-bottom:1px solid #eee;">
+
+        <!-- Highlights -->
+        <div id="ha-highlights" class="ha-tab-panel active">
+            <div class="ha-content-wrap">
+                <!-- Table of Contents (like Hải Anh reference) -->
+                <div class="ha-toc">
+                    <div class="ha-toc__title">📋 Mục lục</div>
+                    <ul class="ha-toc__list">
+                        <li><a href="#sec-material">▸ Vật liệu &amp; chất liệu vải</a></li>
+                        <li><a href="#sec-tech">▸ Công nghệ phản quang 3M</a></li>
+                        <li><a href="#sec-sewing">▸ Kỹ thuật may chuẩn B2B</a></li>
+                        <li><a href="#sec-custom">▸ Tùy chỉnh theo yêu cầu</a></li>
                     </ul>
+                </div>
 
-                    <!-- CTA BOX -->
-                    <div class="lead-action-block reveal reveal-scale">
-                        <h3 style="margin: 0 0 16px 0; font-weight: 700;">Bạn muốn có báo giá sỉ nhanh nhất?</h3>
-                        <div class="lead-action-buttons">
-                            <a href="index.html#quote-section" class="btn btn--primary btn--lg"
-                                style="width: 100%; justify-content: center; font-weight: 700;">Nhận báo giá sỉ ngay</a>
-                            <a href="https://zalo.me" target="_blank" class="btn btn--outline"
-                                style="width: 100%; justify-content: center; border-color: var(--clr-accent); color: var(--clr-primary);">Chat
-                                Zalo tư vấn</a>
-                        </div>
-                        <!-- <div class="hotline-pill">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
-                            </svg>
-                            Hotline/Zalo: 0905.123.456
-                        </div> -->
+                <div id="sec-material" class="ha-content-split">
+                    <img src="images/product-pants.png" alt="Chất liệu vải Kaki TC" loading="lazy">
+                    <div>
+                        <h2 id="sec-material">Vật liệu &amp; Chất liệu vải</h2>
+                        <p style="color:#666; font-size:14px; margin-bottom:18px; line-height:1.7;">Vải Kaki TC 65% Polyester / 35% Cotton nhập khẩu đạt định lượng 240 GSM — tiêu chuẩn cung ứng cho các cơ sở FDI và đơn vị công trình hạng nặng.</p>
+                        <ul class="ha-check-list">
+                            <li>
+                                <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span><strong>240 GSM</strong> — cứng vải, chịu mài mòn cao, không nhăn trong môi trường công việc cường độ lớn</span>
+                            </li>
+                            <li>
+                                <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span><strong>Cầm màu công nghiệp</strong> — bền màu sau 50 lần giặt, không trổ, không xù lông</span>
+                            </li>
+                            <li>
+                                <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span><strong>Thoáng khí</strong> — cấu trúc dệt chéo 2/1 giúp thông hơi tốt trong điều kiện nhiệt độ cao</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- COLUMN 3: SIDEBAR -->
-                <aside class="utility-sidebar">
-                    <div class="utility-card">
-                        <h4
-                            style="font-size: 15px; color: var(--clr-primary); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px;">
-                            Tiện ích đối tác</h4>
-                        <ul class="utility-list">
-                            <li><i style="color: var(--clr-primary);">✈</i> Giao hàng toàn quốc</li>
-                            <li><i style="color: var(--clr-primary);">📏</i> Tư vấn size tận nơi</li>
-                            <li><i style="color: var(--clr-primary);">🛠</i> Bảo hành 6 tháng</li>
-                            <li><i style="color: var(--clr-primary);">🏷</i> VAT 8-10% đầy đủ</li>
-                        </ul>
-                    </div>
-
-                    <div class="banner-card">
-                        <img src="images/factory-1.png" alt="Năng lực xưởng may Dương Thành Tín" loading="lazy">
-                        <div class="banner-card__overlay">
-                            <a href="profile.html" class="btn btn--secondary btn--sm"
-                                style="border: 1px solid #fff; background: rgba(255,255,255,0.1); backdrop-filter: blur(4px); color: #fff;">Tải
-                                Hồ sơ năng lực</a>
-                        </div>
-                    </div>
-                </aside>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- PRODUCT CONTENT TABS (SWITCHER) -->
-    <nav class="tabs-nav-sticky">
-        <div class="container reveal reveal-up">
-            <button class="tab-sticky-btn active" onclick="switchTab(this, 'highlights-panel')">Điểm nổi bật</button>
-            <button class="tab-sticky-btn" onclick="switchTab(this, 'tech-specs')">Thông số kỹ thuật</button>
-            <button class="tab-sticky-btn" onclick="switchTab(this, 'policy')">Chính sách B2B</button>
-            <button class="tab-sticky-btn" onclick="switchTab(this, 'faq')">FAQ</button>
-        </div>
-    </nav>
-
-    <div class="product-tabs-section">
-        <div class="container">
-            <!-- Highlights Panel -->
-            <div id="highlights-panel" class="tab-panel active" style="padding: 40px 0;">
-                <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center;">
+                <div id="sec-tech" class="ha-content-split" style="flex-direction: row-reverse;">
+                    <img src="images/factory-3.png" alt="Công nghệ 3M" loading="lazy" style="order:-1;">
                     <div>
-                        <img src="images/product-pants.png" alt="Chi tiết sản phẩm" style="width: 100%;">
-                    </div>
-                    <div>
-                        <h2 style="font-size: 28px; color: var(--clr-primary); margin-bottom: 24px;">Ưu việt dòng sản
-                            phẩm Cao cấp</h2>
-                        <ul class="product-highlights-list" style="columns: 1; margin-bottom: 30px;">
-                            <li><span>✓</span> <strong>Vải nhập khẩu:</strong> Kaki TC 65/35 tiêu chuẩn quốc tế, không
-                                bay màu.</li>
-                            <li><span>✓</span> <strong>Công nghệ 3M:</strong> Dải phản quang nhập khẩu Mỹ, tầm nhìn xa
-                                hơn 200m.</li>
-                            <li><span>✓</span> <strong>Đường may kỹ thuật:</strong> 2 kim móc xích, đánh bọ chịu lực tại
-                                12 điểm yếu.</li>
-                            <li><span>✓</span> <strong>Thiết kế B2B:</strong> Tối ưu khả năng vận động và thẩm mỹ chuyên
-                                nghiệp.</li>
+                        <h2>Công nghệ phản quang 3M</h2>
+                        <p style="color:#666; font-size:14px; margin-bottom:18px; line-height:1.7;">Dải phản quang 3M Scotchlite™ được may cố định hai bên, đảm bảo khả năng cảnh báo tầm nhìn 200m trong điều kiện thiếu sáng và mưa.</p>
+                        <ul class="ha-check-list">
+                            <li>
+                                <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span>Tầm phản chiếu ánh sáng <strong>200m trở lên</strong></span>
+                            </li>
+                            <li>
+                                <span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span>Không bong tróc sau <strong>50 lần giặt</strong> công nghiệp</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Specs Panel -->
-            <div id="tech-specs" class="tab-panel" style="padding: 40px 0;">
-                <h2 style="font-size: 28px; color: var(--clr-primary); margin-bottom: 32px;">Thông số kỹ thuật & Tiêu
-                    chuẩn</h2>
-                <table class="spec-table-new">
-                    <tr>
-                        <td>Chất liệu vải</td>
-                        <td>Kaki 65% Polyester / 35% Cotton</td>
-                    </tr>
-                    <tr>
-                        <td>Định lượng vải</td>
-                        <td>240 GSM</td>
-                    </tr>
-                    <tr>
-                        <td>Công nghệ Phản quang</td>
-                        <td>3M Scotchlite™ High Visibility</td>
-                    </tr>
-                    <tr>
-                        <td>Tiêu chuẩn an toàn</td>
-                        <td>EN ISO 20471 Class 2</td>
-                    </tr>
+        <!-- Specs -->
+        <div id="ha-specs" class="ha-tab-panel">
+            <div class="ha-content-wrap">
+                <h2 style="font-family:'Outfit',sans-serif; font-weight:800; color:#0F2A44; font-size:22px; margin-bottom:24px;">Thông số kỹ thuật</h2>
+                <table class="ha-spec-table">
+                    <tr><td>Chất liệu vải</td><td>Kaki 65% Polyester / 35% Cotton (TC)</td></tr>
+                    <tr><td>Định lượng</td><td>240 GSM</td></tr>
+                    <tr><td>Công nghệ phản quang</td><td>3M Scotchlite™ High Visibility</td></tr>
+                    <tr><td>Màu tiêu chuẩn</td><td>Cam, Vàng, Xanh dương, Xanh lá (tùy chỉnh)</td></tr>
+                    <tr><td>Size</td><td>S / M / L / XL / XXL / XXXL</td></tr>
+                    <tr><td>Kiểu may</td><td>Đường may 2 kim móc xích, đánh bọ chịu lực</td></tr>
+                    <tr><td>Số lượng tối thiểu</td><td>20 sản phẩm / lô</td></tr>
+                    <tr><td>Thời gian sản xuất</td><td>7–10 ngày làm việc</td></tr>
+                    <tr><td>Tùy chỉnh logo</td><td>In lụa / In nhiệt / Thêu vi tính</td></tr>
+                    <tr><td>Chứng từ</td><td>Hợp đồng B2B + Hóa đơn VAT điện tử</td></tr>
                 </table>
             </div>
+        </div>
 
-            <!-- Policy Panel -->
-            <div id="policy" class="tab-panel" style="padding: 40px 0;">
-                <h2 style="font-size: 28px; color: var(--clr-primary); text-align: center; margin-bottom: 32px;">Chính
-                    sách & Ưu đãi B2B</h2>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-                    <div
-                        style="background: #fdfdfd; padding: 24px; border: 1px solid var(--clr-border); text-align: center;">
-                        <h4 style="color: var(--clr-primary);">Vận Chuyển</h4>
-                        <p style="font-size: 14px; color: var(--clr-text-muted);">Miễn phí cho đơn từ 100 bộ.</p>
+        <!-- Policy -->
+        <div id="ha-policy" class="ha-tab-panel">
+            <div class="ha-content-wrap">
+                <h2 style="font-family:'Outfit',sans-serif; font-weight:800; color:#0F2A44; font-size:22px; text-align:center; margin-bottom:8px;">Chính sách B2B</h2>
+                <p style="text-align:center; color:#888; font-size:14px; margin-bottom:32px;">Cam kết đồng hành dài hạn — minh bạch, rõ ràng từ đặt hàng đến giao nhận.</p>
+                <div class="ha-policy-grid">
+                    <div class="ha-policy-card">
+                        <div class="ha-policy-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/></svg></div>
+                        <h4>Báo giá 24h</h4>
+                        <p>Tiếp nhận yêu cầu và phản hồi báo giá chi tiết trong 24 giờ làm việc.</p>
+                    </div>
+                    <div class="ha-policy-card">
+                        <div class="ha-policy-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+                        <h4>Giao toàn quốc</h4>
+                        <p>Miễn phí vận chuyển nội thành Đà Nẵng. Trên 100 bộ miễn phí toàn quốc.</p>
+                    </div>
+                    <div class="ha-policy-card">
+                        <div class="ha-policy-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                        <h4>Bảo hành 6 tháng</h4>
+                        <p>Đổi trả lỗi đường may, dải phản quang bong tróc. Không phí phụ trội.</p>
+                    </div>
+                    <div class="ha-policy-card">
+                        <div class="ha-policy-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+                        <h4>Hóa đơn VAT</h4>
+                        <p>Xuất hóa đơn GTGT 8–10% điện tử, đủ chứng từ kế toán doanh nghiệp.</p>
+                    </div>
+                    <div class="ha-policy-card">
+                        <div class="ha-policy-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+                        <h4>Hợp đồng B2B</h4>
+                        <p>Ký hợp đồng đầy đủ pháp lý, cam kết rõ tiến độ &amp; chất lượng.</p>
+                    </div>
+                    <div class="ha-policy-card">
+                        <div class="ha-policy-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                        <h4>Sản xuất đúng hạn</h4>
+                        <p>Cam kết deadline từ trước ký hợp đồng. Bồi thường theo tỷ lệ nếu chậm.</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- FAQ Panel -->
-            <div id="faq" class="tab-panel" style="padding: 40px 0;">
-                <h2 style="font-size: 28px; color: var(--clr-primary); text-align: center; margin-bottom: 40px;">Giải
-                    đáp thắc mắc</h2>
-                <div class="accordion" style="max-width: 900px; margin: 0 auto;">
-                    <div class="accordion__item">
-                        <button class="accordion__header">Thời gian sản xuất là bao lâu?</button>
-                        <div class="accordion__body">
-                            <div class="accordion__body-inner">Trung bình 12-15 ngày làm việc.</div>
+        <!-- FAQ -->
+        <div id="ha-faq" class="ha-tab-panel">
+            <div class="ha-content-wrap">
+                <h2 style="font-family:'Outfit',sans-serif; font-weight:800; color:#0F2A44; font-size:22px; text-align:center; margin-bottom:32px;">Câu hỏi thường gặp</h2>
+                <div class="ha-faq">
+                    <div class="ha-faq__item">
+                        <button class="ha-faq__header" onclick="haFaq(this)">
+                            Thời gian sản xuất bao lâu?
+                            <span class="ha-faq__icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                        </button>
+                        <div class="ha-faq__body">
+                            <div class="ha-faq__body-inner">7–10 ngày làm việc. Đơn trên 500 bộ: 15–20 ngày. Chúng tôi thông báo tiến độ theo tuần qua Zalo/email.</div>
+                        </div>
+                    </div>
+                    <div class="ha-faq__item">
+                        <button class="ha-faq__header" onclick="haFaq(this)">
+                            Có nhận thiết kế logo riêng không?
+                            <span class="ha-faq__icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                        </button>
+                        <div class="ha-faq__body">
+                            <div class="ha-faq__body-inner">Có. Hỗ trợ in lụa, in nhiệt, thêu vi tính theo logo và hệ màu thương hiệu. Cần cung cấp file AI/PDF để bộ phận kỹ thuật duyệt trước sản xuất.</div>
+                        </div>
+                    </div>
+                    <div class="ha-faq__item">
+                        <button class="ha-faq__header" onclick="haFaq(this)">
+                            Số lượng tối thiểu là bao nhiêu?
+                            <span class="ha-faq__icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                        </button>
+                        <div class="ha-faq__body">
+                            <div class="ha-faq__body-inner">Tối thiểu 20 sản phẩm/lô. Đơn từ 100 bộ được ưu đãi giá sỉ và miễn phí vận chuyển toàn quốc.</div>
+                        </div>
+                    </div>
+                    <div class="ha-faq__item">
+                        <button class="ha-faq__header" onclick="haFaq(this)">
+                            Có xuất hóa đơn VAT không?
+                            <span class="ha-faq__icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                        </button>
+                        <div class="ha-faq__body">
+                            <div class="ha-faq__body-inner">Có đầy đủ: Hợp đồng, phiếu xuất kho, hóa đơn VAT điện tử 8–10% theo quy định hiện hành.</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
-    </section>
-    </div>
+
     </div>
 
     <!-- RELATED PRODUCTS -->
-    <section class="section bg-warm">
-        <div class="container">
-            <h2 style="font-size: 28px; color: var(--clr-primary); margin-bottom: 12px; text-align: center;">Sản phẩm
-                tương tự</h2>
-            <p style="text-align: center; color: var(--clr-text-muted); margin-bottom: 40px;">Giải pháp bảo hộ đồng bộ
-                cho đội ngũ của bạn</p>
-
-            <div class="related-carousel">
-                <!-- Product 1 -->
-                <a href="product.html" class="related-card reveal reveal-up delay-100">
-                    <div class="related-card__img">
-                        <img src="images/product-pants.png" alt="Quần bảo hộ">
-                        <span class="related-card__tag" style="position: absolute; top: 12px; left: 12px;">MỚI</span>
+    <section class="ha-related">
+        <div class="ha-related__inner">
+            <div class="ha-related__header">
+                <h2>Sản phẩm tương tự</h2>
+                <p>Giải pháp bảo hộ &amp; đồng phục đồng bộ cho toàn bộ đội ngũ</p>
+            </div>
+            <div class="ha-related__grid">
+                <a href="product.html" class="ha-rel-card">
+                    <div class="ha-rel-card__img">
+                        <img src="images/product-pants.png" alt="Quần bảo hộ" loading="lazy">
+                        <span class="ha-rel-badge ha-rel-badge--new">MỚI</span>
                     </div>
-                    <div class="related-card__info">
-                        <h4>Quần bảo hộ nhiều túi kỹ thuật</h4>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
-                            <span style="font-size: 11px; color: var(--clr-text-muted);">Vải Kaki chống cháy</span>
-                            <span style="font-size: 13px; font-weight: 700; color: var(--clr-primary);">Nhận báo
-                                giá</span>
-                        </div>
+                    <div class="ha-rel-card__info">
+                        <div class="ha-rel-card__title">Quần Bảo Hộ Nhiều Túi Kỹ Thuật</div>
+                        <div class="ha-rel-card__sub">Vải Kaki chống cháy</div>
+                        <div class="ha-rel-card__price">Liên hệ báo giá</div>
                     </div>
+                    <span class="ha-rel-card__cta">Nhận báo giá →</span>
                 </a>
-
-                <!-- Product 2 -->
-                <a href="product.html" class="related-card reveal reveal-up delay-200">
-                    <div class="related-card__img">
-                        <img src="images/product-uniform.png" alt="Bộ đồ phòng sạch">
+                <a href="product.html" class="ha-rel-card">
+                    <div class="ha-rel-card__img">
+                        <img src="images/product-uniform.png" alt="Bộ phòng sạch ESD" loading="lazy">
+                        <span class="ha-rel-badge ha-rel-badge--hot">HOT</span>
                     </div>
-                    <div class="related-card__info">
-                        <h4>Bộ quần áo phòng sạch ESD</h4>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
-                            <span style="font-size: 11px; color: var(--clr-text-muted);">Tiêu chuẩn IEC</span>
-                            <span style="font-size: 13px; font-weight: 700; color: var(--clr-primary);">Nhận báo
-                                giá</span>
-                        </div>
+                    <div class="ha-rel-card__info">
+                        <div class="ha-rel-card__title">Bộ Quần Áo Phòng Sạch ESD Chống Tĩnh Điện</div>
+                        <div class="ha-rel-card__sub">Tiêu chuẩn IEC 61340</div>
+                        <div class="ha-rel-card__price">Liên hệ báo giá</div>
                     </div>
+                    <span class="ha-rel-card__cta">Nhận báo giá →</span>
                 </a>
-
-                <!-- Product 3 -->
-                <a href="product.html" class="related-card reveal reveal-up delay-300">
-                    <div class="related-card__img">
-                        <img src="images/product-winter.png" alt="Áo khoác bảo hộ">
-                        <span class="related-card__tag" style="position: absolute; top: 12px; left: 12px;">HOT</span>
+                <a href="product.html" class="ha-rel-card">
+                    <div class="ha-rel-card__img">
+                        <img src="images/product-winter.png" alt="Áo khoác bảo hộ" loading="lazy">
+                        <span class="ha-rel-badge ha-rel-badge--hot">HOT</span>
                     </div>
-                    <div class="related-card__info">
-                        <h4>Áo khoác bảo hộ mùa đông 2 lớp</h4>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
-                            <span style="font-size: 11px; color: var(--clr-text-muted);">Chống nước/giữ nhiệt</span>
-                            <span style="font-size: 13px; font-weight: 700; color: var(--clr-primary);">Nhận báo
-                                giá</span>
-                        </div>
+                    <div class="ha-rel-card__info">
+                        <div class="ha-rel-card__title">Áo Khoác Bảo Hộ Mùa Đông 2 Lớp Chống Nước</div>
+                        <div class="ha-rel-card__sub">Chống nước / Giữ nhiệt</div>
+                        <div class="ha-rel-card__price">Liên hệ báo giá</div>
                     </div>
+                    <span class="ha-rel-card__cta">Nhận báo giá →</span>
                 </a>
-
-                <!-- Product 4 -->
-                <a href="product.html" class="related-card reveal reveal-up delay-400">
-                    <div class="related-card__img">
-                        <img src="images/polo.png" alt="Áo Polo công nhân">
+                <a href="product.html" class="ha-rel-card">
+                    <div class="ha-rel-card__img">
+                        <img src="images/polo.png" alt="Áo Polo" loading="lazy">
+                        <span class="ha-rel-badge ha-rel-badge--new">MỚI</span>
                     </div>
-                    <div class="related-card__info">
-                        <h4>Áo Polo thun lạnh công nhân</h4>
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
-                            <span style="font-size: 11px; color: var(--clr-text-muted);">Thoáng mát/Cầm màu</span>
-                            <span style="font-size: 13px; font-weight: 700; color: var(--clr-primary);">Nhận báo
-                                giá</span>
-                        </div>
+                    <div class="ha-rel-card__info">
+                        <div class="ha-rel-card__title">Áo Polo Thun Lạnh Đồng Phục Công Nhân</div>
+                        <div class="ha-rel-card__sub">Thoáng mát / Cầm màu</div>
+                        <div class="ha-rel-card__price">Liên hệ báo giá</div>
                     </div>
+                    <span class="ha-rel-card__cta">Nhận báo giá →</span>
                 </a>
             </div>
         </div>
     </section>
-
-    <!-- CTA BANNER -->
-    <!-- <section class="section">
-        <div class="container">
-            <div class="cta-banner">
-                <h2>Đặt hàng sản phẩm này ngay</h2>
-                <p>Liên hệ để nhận báo giá cạnh tranh nhất cho đơn hàng B2B số lượng lớn</p>
-                <a href="index.html#quote-section" class="btn btn--primary btn--lg">Nhận báo giá B2B</a>
-            </div>
-        </div>
-    </section> -->
 
     <!-- FOOTER -->
     <div id="footer-container"></div>
 
+    <script>
+        function haSwitch(el, src) {
+            document.querySelectorAll('.ha-gallery__thumb').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.ha-gallery__dot').forEach(d => d.classList.remove('active'));
+            el.classList.add('active');
+            const idx = Array.from(el.parentElement.children).indexOf(el);
+            const dots = document.querySelectorAll('.ha-gallery__dot');
+            if (dots[idx]) dots[idx].classList.add('active');
+            const img = document.getElementById('haMainImg');
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.2s';
+            setTimeout(() => { img.src = src; img.style.opacity = '1'; }, 200);
+        }
 
+        function haTab(btn, panelId) {
+            document.querySelectorAll('.ha-tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.ha-tab-panel').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(panelId).classList.add('active');
+        }
 
-    <!-- SCHEMA MARKUP (Giữ nguyên) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Áo phản quang công trình",
-      "brand": { "@type": "Brand", "name": "Dương Thành Tín" }
-    }
+        function haFaq(btn) {
+            const isOpen = btn.classList.contains('open');
+            document.querySelectorAll('.ha-faq__header').forEach(h => {
+                h.classList.remove('open');
+                h.nextElementSibling.classList.remove('open');
+            });
+            if (!isOpen) {
+                btn.classList.add('open');
+                btn.nextElementSibling.classList.add('open');
+            }
+        }
     </script>
 
-    <script src="script.js"></script>
-</body>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Product","name":"Áo phản quang công trình Dương Thành Tín","brand":{"@type":"Brand","name":"Dương Thành Tín"}}
+    </script>
 
+    <script src="script.js?v=1773746252487"></script>
+</body>
 </html>

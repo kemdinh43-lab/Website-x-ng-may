@@ -641,9 +641,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   // Load Header and Footer components
   try {
+    const ts = new Date().getTime();
     const [headerRes, footerRes] = await Promise.all([
-      fetch('components/header.html'),
-      fetch('components/footer.html')
+      fetch('components/header.html?v=' + ts),
+      fetch('components/footer.html?v=' + ts)
     ]);
 
     if (headerRes.ok) {
@@ -1500,3 +1501,28 @@ function initHandbookPage() {
 }
 
 // Call init functions on DOM load (check if already called or add to existing DOMContentLoaded)
+
+/* ===============================================
+   FAQ ACCORDION LOGIC
+   =============================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item-b2b');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question-b2b');
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+});

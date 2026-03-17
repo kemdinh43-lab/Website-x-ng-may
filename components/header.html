@@ -26,14 +26,112 @@
                 </div>
             </a>
 
+<style>
+/* ===== HƯỚNG DẪN DROPDOWN ===== */
+.navbar__nav .nav-dropdown {
+    position: relative;
+}
+.navbar__nav .nav-dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.navbar__nav .nav-dropdown > a::after {
+    content: '';
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    transition: transform 0.2s;
+    margin-top: 1px;
+}
+.navbar__nav .nav-dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 240px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+    z-index: 1000;
+    overflow: hidden;
+    border-top: 3px solid #F37021;
+}
+.navbar__nav .nav-dropdown:hover .dropdown-menu {
+    display: block;
+    animation: dropIn 0.18s ease;
+}
+@keyframes dropIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    font-size: 14px;
+    color: #333 !important;
+    text-decoration: none;
+    border-bottom: 1px solid #f5f5f5;
+    transition: background 0.15s, color 0.15s;
+    font-weight: 500 !important;
+}
+.dropdown-menu a:last-child { border-bottom: none; }
+.dropdown-menu a:hover { background: #fff8f5; color: #F37021 !important; }
+.dropdown-menu .dm-icon {
+    width: 32px; height: 32px;
+    background: rgba(243,112,33,0.1);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+.dropdown-menu .dm-icon svg { color: #F37021; }
+.dropdown-menu .dm-text { display: flex; flex-direction: column; gap: 2px; }
+.dropdown-menu .dm-title { font-size: 13.5px; font-weight: 700; color: #0F2A44; }
+.dropdown-menu a:hover .dm-title { color: #F37021; }
+.dropdown-menu .dm-sub { font-size: 11px; color: #aaa; font-weight: 400; }
+</style>
+
             <nav class="navbar__nav" id="mainNav">
                 <a href="index.html">Trang Chủ</a>
                 <a href="profile.html">Giới thiệu</a>
                 <a href="category.html">Sản phẩm</a>
-                <a href="handbook.html">Cẩm nang</a>
+                <div class="nav-dropdown">
+                    <a href="#">Hướng dẫn</a>
+                    <div class="dropdown-menu">
+                        <a href="guide-order.html">
+                            <span class="dm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14l-4-4 4-4M5 10h14"/></svg></span>
+                            <span class="dm-text">
+                                <span class="dm-title">Hướng dẫn đặt hàng</span>
+                                <span class="dm-sub">Quy trình đặt may từ A–Z</span>
+                            </span>
+                        </a>
+                        <a href="handbook.html">
+                            <span class="dm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+                            <span class="dm-text">
+                                <span class="dm-title">Hướng dẫn bộ phận thu mua</span>
+                                <span class="dm-sub">Tài liệu cho phòng mua hàng</span>
+                            </span>
+                        </a>
+                        <a href="guide-size.html">
+                            <span class="dm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM9 3v18M15 3v18"/></svg></span>
+                            <span class="dm-text">
+                                <span class="dm-title">Hướng dẫn chọn size</span>
+                                <span class="dm-sub">Bảng size chuẩn theo từng dòng sản phẩm</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
                 <a href="blog.html">Tin Tức</a>
                 <a href="contact.html">Liên Hệ</a>
             </nav>
+
 
             <div class="navbar__actions">
                 <!-- Hotline -->
