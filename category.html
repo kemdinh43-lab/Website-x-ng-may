@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Mục Sản Phẩm | Dương Thành Tín — Đồng Phục Theo Ngành Nghề</title>
+    <meta name="description"
+        content="Danh mục đồng phục bảo hộ theo ngành: xây dựng, nhà máy, bệnh viện, công sở, xí nghiệp. Case Study đơn hàng thực tế.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div id="header-container"></div>
+    <!-- CATEGORY PAGE REDESIGN -->
+    <section class="category-page" style="padding: 40px 0; background-color: #f8f9fa;">
+
+        <!-- TOP SECTION: Breadcrumb, Title, Category Grid -->
+        <div class="container" style="max-width: 1280px; margin-bottom: 32px;">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb-b2b" style="margin-bottom: 16px; font-size: 13px; color: var(--clr-text-muted);">
+                <a href="index.html" style="color: inherit; text-decoration: none;">Trang chủ</a> <span
+                    class="separator" style="margin: 0 8px;">></span>
+                <span class="active-page" style="color: var(--clr-primary);">Danh mục sản phẩm</span>
+            </nav>
+
+            <!-- Page Title -->
+            <h1 id="categoryTitle"
+                style="font-size: 32px; font-weight: 800; color: var(--clr-primary); margin-bottom: 24px; text-transform: uppercase;">
+                Áo Đồng Phục Công Ty</h1>
+
+            <!-- Category Shortcut Grid (4 items) -->
+            <div class="category-shortcut-grid">
+                <a href="#" class="shortcut-item">
+                    <img src="images/hero-1.png" alt="Áo thun đồng phục">
+                    <span>Áo thun đồng phục</span>
+                </a>
+                <a href="#" class="shortcut-item">
+                    <img src="images/hero-2.png" alt="Áo đồng phục công nhân">
+                    <span>Áo đồng phục công nhân</span>
+                </a>
+                <a href="#" class="shortcut-item">
+                    <img src="images/hero-3.png" alt="Áo khoác đồng phục">
+                    <span>Áo khoác đồng phục</span>
+                </a>
+                <a href="#" class="shortcut-item">
+                    <img src="images/hero-4.png" alt="Áo sơ mi đồng phục">
+                    <span>Áo sơ mi đồng phục</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MAIN LAYOUT (2 Columns) -->
+        <div class="container container--category-layout"
+            style="max-width: 1280px; display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start;">
+
+            <!-- SIDEBAR -->
+            <aside class="category-sidebar reveal reveal-left">
+                <!-- Box Danh mục -->
+                <div class="sidebar-box"
+                    style="background: var(--clr-white); border: 1px solid var(--clr-border); border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 24px;">
+                    <h3
+                        style="background: var(--clr-bg-alt); color: var(--clr-primary); padding: 16px 20px; font-size: 16px; margin: 0; text-transform: uppercase; font-weight: 800; border-bottom: 2px solid var(--clr-accent);">
+                        DANH MỤC SẢN PHẨM</h3>
+                    <ul id="categoryList" style="list-style: none; padding: 0; margin: 0;">
+                        <li style="border-bottom: 1px solid var(--clr-border);">
+                            <a href="#" class="sidebar-link active" data-category="bao-ho"
+                                style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; color: var(--clr-primary); text-decoration: none; font-weight: 700; background: var(--clr-white); border-left: 4px solid var(--clr-accent);">
+                                Áo đồng phục công ty <span style="font-size: 18px; line-height: 1;">+</span>
+                            </a>
+                        </li>
+                        <li style="border-bottom: 1px solid var(--clr-border);">
+                            <a href="#" class="sidebar-link" data-category="y-te"
+                                style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; color: var(--clr-text-main); text-decoration: none; font-weight: 500; transition: all 0.2s;">
+                                Đồng phục y tế <span style="font-size: 18px; line-height: 1; opacity: 0.5;">+</span>
+                            </a>
+                        </li>
+                        <li style="border-bottom: 1px solid var(--clr-border);">
+                            <a href="#" class="sidebar-link" data-category="nha-may"
+                                style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; color: var(--clr-text-main); text-decoration: none; font-weight: 500; transition: all 0.2s;">
+                                Đồng phục nhà máy <span style="font-size: 18px; line-height: 1; opacity: 0.5;">+</span>
+                            </a>
+                        </li>
+                        <li style="border-bottom: 1px solid var(--clr-border);">
+                            <a href="#" class="sidebar-link" data-category="ao-thun"
+                                style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; color: var(--clr-text-main); text-decoration: none; font-weight: 500; transition: all 0.2s;">
+                                Áo thun Polo Doanh nghiệp <span
+                                    style="font-size: 18px; line-height: 1; opacity: 0.5;">+</span>
+                            </a>
+                        </li>
+                        <li style="border-bottom: 1px solid var(--clr-border);">
+                            <a href="#" class="sidebar-link" data-category="ao-gio"
+                                style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; color: var(--clr-text-main); text-decoration: none; font-weight: 500; transition: all 0.2s;">
+                                Đồng phục áo gió <span style="font-size: 18px; line-height: 1; opacity: 0.5;">+</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-link" data-category="vai-si"
+                                style="display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; color: var(--clr-text-main); text-decoration: none; font-weight: 500; transition: all 0.2s;">
+                                Vải sỉ công nghiệp <span style="font-size: 18px; line-height: 1; opacity: 0.5;">+</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Box Hỗ trợ -->
+                <div class="sidebar-box support-box"
+                    style="background: var(--clr-white); padding: 24px; text-align: center; border: 1px solid var(--clr-border); border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+                    <h3
+                        style="font-size: 16px; margin-bottom: 8px; color: var(--clr-primary); font-weight: 800; text-transform: uppercase;">
+                        HỖ TRỢ TRỰC TUYẾN</h3>
+                    <p style="font-size: 14px; color: var(--clr-text-muted); margin-bottom: 16px;">Tư vấn & Báo giá</p>
+                    <p style="font-size: 26px; font-weight: 800; color: var(--clr-accent); margin-bottom: 8px;">
+                        0905.123.456</p>
+                    <p style="font-size: 13px; color: var(--clr-text-muted); margin-bottom: 24px;">(Từ 8:00 - 17:30 Hàng
+                        ngày)</p>
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                        <a href="tel:0905123456" class="btn btn--primary"
+                            style="width: 100%; justify-content: center; font-size: 14px; padding: 10px;">GỌI NGAY</a>
+                        <a href="https://zalo.me" target="_blank" class="btn btn--outline"
+                            style="width: 100%; border-color: var(--clr-primary); color: var(--clr-primary); justify-content: center; font-size: 14px; padding: 10px;">CHAT
+                            ZALO</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="category-main">
+                <!-- Header / Sorting -->
+                <div class="category-header reveal reveal-up"
+                    style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--clr-border);">
+                    <div class="sort-dropdown"
+                        style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--clr-text-muted);">
+                        <span>Sắp xếp theo:</span>
+                        <select id="productSort"
+                            style="padding: 8px 16px; border: 1px solid var(--clr-border); border-radius: 4px; font-family: inherit; color: var(--clr-text-main); outline: none; cursor: pointer; background: #fff;">
+                            <option value="default">Mới nhất</option>
+                            <option value="price-asc">Giá từ thấp đến cao</option>
+                            <option value="price-desc">Giá từ cao đến thấp</option>
+                            <option value="bestseller">Xem nhiều nhất</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div id="productGrid" class="product-grid-new">
+                    <!-- Products will be injected by JS -->
+                </div>
+
+                <!-- Pagination -->
+                <div id="paginationContainer" class="pagination-new"
+                    style="display: flex; justify-content: center; gap: 8px; margin-top: 40px; margin-bottom: 40px;">
+                    <!-- Pagination buttons will be injected by JS -->
+                </div>
+
+                <!-- SEO Content Block -->
+                <div class="seo-content-block"
+                    style="background: var(--clr-bg-alt); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--clr-border); margin-top: 40px;">
+                    <h2 style="font-size: 20px; font-weight: 800; color: var(--clr-primary); margin-bottom: 16px;">Xưởng
+                        May Áo Đồng Phục Công Ty Uy Tín</h2>
+                    <p style="font-size: 14px; color: var(--clr-text-main); line-height: 1.6; margin-bottom: 12px;">
+                        Dương Thành Tín tự hào là đơn vị cung cấp số lượng lớn <strong>áo đồng phục công ty</strong>, áo
+                        thun B2B và đồ bảo hộ lao động đạt chuẩn chất lượng quốc tế. Với quy mô sản xuất khép kín, chúng
+                        tôi mang tới mức giá xuất xưởng tốt nhất cho đối tác.
+                    </p>
+                    <p style="font-size: 14px; color: var(--clr-text-main); line-height: 1.6; margin-bottom: 0;">
+                        Tất cả các sản phẩm áo đồng phục công ty đều trải qua 4 bước kiểm định (SOP) nghiêm ngặt trước
+                        khi đóng gói giao hàng.
+                    </p>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- RELATED NEWS (Mới thêm theo yêu cầu) -->
+    <section class="related-news section section--alt">
+        <div class="container">
+            <div class="related-news__header reveal reveal-up">
+                <h2>Bạn cần thêm thông tin kỹ thuật? Đọc ngay bài viết từ chuyên gia.</h2>
+                <p>Nắm bắt các tiêu chuẩn an toàn và hướng dẫn lựa chọn đồng phục bảo hộ mới nhất</p>
+            </div>
+            <div class="related-news__grid">
+                <!-- Card 1 -->
+                <a href="blog.html#post-demo" class="related-news__card reveal reveal-up delay-100" rel="dofollow">
+                    <div class="related-news__card-img">
+                        <img src="images/blog-fabric.png"
+                            alt="Hướng dẫn chọn vải bảo hộ phù hợp từng ngành công nghiệp">
+                        <span class="tag">Hướng dẫn</span>
+                    </div>
+                    <div class="related-news__card-body">
+                        <h3>Hướng dẫn chọn vải bảo hộ phù hợp từng ngành công nghiệp</h3>
+                        <p>Mỗi ngành nghề có yêu cầu đặc thù về chất liệu vải bảo hộ. Bài viết tổng hợp tiêu chí chọn
+                            vải kaki, chống cháy, chống tĩnh điện...</p>
+                        <div class="related-news__card-footer">
+                            <span>20/02/2026</span>
+                            <span class="read-more">Đọc tiếp →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="blog.html#post-demo" class="related-news__card reveal reveal-up delay-200" rel="dofollow">
+                    <div class="related-news__card-img">
+                        <img src="images/factory-1.png" alt="Tiêu chuẩn EN ISO 20471 — Quần áo tầm nhìn cao">
+                        <span class="tag">Tiêu chuẩn</span>
+                    </div>
+                    <div class="related-news__card-body">
+                        <h3>Tiêu chuẩn EN ISO 20471 — Quần áo tầm nhìn cao</h3>
+                        <p>Tìm hiểu các cấp độ phản quang và yêu cầu diện tích dải phản quang theo tiêu chuẩn châu Âu để
+                            bảo vệ người lao động...</p>
+                        <div class="related-news__card-footer">
+                            <span>15/02/2026</span>
+                            <span class="read-more">Đọc tiếp →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="blog.html#post-demo" class="related-news__card reveal reveal-up delay-300" rel="dofollow">
+                    <div class="related-news__card-img">
+                        <img src="images/factory-2.png" alt="5 sai lầm khi đặt may đồng phục bảo hộ số lượng lớn">
+                        <span class="tag">Kinh nghiệm</span>
+                    </div>
+                    <div class="related-news__card-body">
+                        <h3>5 sai lầm khi đặt may đồng phục bảo hộ số lượng lớn</h3>
+                        <p>Những lỗi thường gặp khi doanh nghiệp đặt may đồng phục bảo hộ và cách khắc phục hiệu quả
+                            giúp tiết kiệm chi phí...</p>
+                        <div class="related-news__card-footer">
+                            <span>10/02/2026</span>
+                            <span class="read-more">Đọc tiếp →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center" style="margin-top:var(--space-xl)">
+                <a href="blog.html" class="btn btn--secondary" rel="dofollow">Xem tất cả bài viết</a>
+            </div>
+        </div>
+    </section>
+    <!-- END RELATED NEWS -->
+
+    <!-- CASE STUDIES -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Đơn hàng tiêu biểu</span>
+                <h2 class="section-title">Case Study — Đối tác đã triển khai</h2>
+                <p class="section-subtitle">Những dự án thực tế chúng tôi đã hoàn thành cho các đối tác trên toàn quốc
+                </p>
+            </div>
+            <div class="grid-2" style="margin-top:var(--space-2xl)">
+
+                <div class="case-card">
+                    <div class="case-card__img" style="height: 160px; overflow: hidden;">
+                        <img src="images/project-1.png" alt="Nhà máy Thép Hòa Phát"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="case-card__header">
+                        <div class="case-card__badge">Xây dựng</div>
+                        <h3>Nhà máy Thép Hòa Phát — Quảng Ngãi</h3>
+                    </div>
+                    <div class="case-card__body">
+                        <div class="case-card__stats">
+                            <div><strong>3.000</strong><span>bộ</span></div>
+                            <div><strong>21</strong><span>ngày giao</span></div>
+                            <div><strong>3M</strong><span>phản quang</span></div>
+                        </div>
+                        <p>Cung cấp đồng phục phản quang cho toàn bộ công nhân nhà máy. Yêu cầu: vải kaki 65/35, phản
+                            quang 3M Scotchlite Class 2, in logo 3 vị trí. Giao hàng đúng tiến độ, không lỗi.</p>
+                        <div class="case-card__quote">
+                            <p>"Chất lượng đường may rất tốt, phản quang sáng rõ. Đã đặt thêm đơn hàng thứ 2."</p>
+                            <cite>— Anh Nguyễn Văn T., Phòng Mua hàng</cite>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-card__img" style="height: 160px; overflow: hidden;">
+                        <img src="images/factory-4.png" alt="KCN Điện Nam Điện Ngọc"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="case-card__header">
+                        <div class="case-card__badge">Nhà máy</div>
+                        <h3>KCN Điện Nam Điện Ngọc — 3 nhà máy FDI</h3>
+                    </div>
+                    <div class="case-card__body">
+                        <div class="case-card__stats">
+                            <div><strong>5.000</strong><span>bộ</span></div>
+                            <div><strong>30</strong><span>ngày giao</span></div>
+                            <div><strong>ESD</strong><span>chống tĩnh điện</span></div>
+                        </div>
+                        <p>May đồng phục kỹ thuật cho 3 nhà máy FDI liên tiếp. Vải chống tĩnh điện ESD theo tiêu chuẩn
+                            IEC 61340, thêu logo, phân biệt bộ phận bằng màu viền cổ.</p>
+                        <div class="case-card__quote">
+                            <p>"Đối tác tin cậy, hiểu rõ yêu cầu kỹ thuật của ngành điện tử. Rất hài lòng."</p>
+                            <cite>— Chị Trần Thị M., HR Manager</cite>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-card__img" style="height: 160px; overflow: hidden;">
+                        <img src="images/factory-5.png" alt="Bệnh viện Đa khoa Trung ương"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="case-card__header">
+                        <div class="case-card__badge">Bệnh viện</div>
+                        <h3>Bệnh viện Đa khoa Trung ương — Đà Nẵng</h3>
+                    </div>
+                    <div class="case-card__body">
+                        <div class="case-card__stats">
+                            <div><strong>800</strong><span>bộ</span></div>
+                            <div><strong>14</strong><span>ngày giao</span></div>
+                            <div><strong>100%</strong><span>vải kháng khuẩn</span></div>
+                        </div>
+                        <p>Sản xuất blouse bác sĩ và scrubs điều dưỡng. Vải kate trắng kháng khuẩn, thêu chức danh và
+                            logo bệnh viện. Phân biệt khoa bằng màu viền.</p>
+                        <div class="case-card__quote">
+                            <p>"May đẹp, vải mặc thoáng mát, phù hợp với môi trường y tế. Sẽ tiếp tục hợp tác."</p>
+                            <cite>— BS. Lê Văn H., Phó Giám đốc</cite>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-card__img" style="height: 160px; overflow: hidden;">
+                        <img src="images/hero-2.png" alt="Điện lực Miền Trung"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="case-card__header">
+                        <div class="case-card__badge">Điện lực</div>
+                        <h3>Điện lực Miền Trung — 5 chi nhánh</h3>
+                    </div>
+                    <div class="case-card__body">
+                        <div class="case-card__stats">
+                            <div><strong>2.500</strong><span>bộ</span></div>
+                            <div><strong>25</strong><span>ngày giao</span></div>
+                            <div><strong>FR</strong><span>chống cháy</span></div>
+                        </div>
+                        <p>Đồng phục chống cháy Proban® cho đội ngũ vận hành lưới điện. Tiêu chuẩn EN 11612, phản quang
+                            3M, in logo theo quy định ngành. Giao 5 chi nhánh cùng lúc.</p>
+                        <div class="case-card__quote">
+                            <p>"Đáp ứng đúng tiêu chuẩn kỹ thuật nghiêm ngặt của ngành điện. Chuyên nghiệp."</p>
+                            <cite>— Anh Phạm Đức A., Trưởng phòng ATVSLĐ</cite>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOMER FEEDBACK -->
+    <section class="section section--alt">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Khách hàng nói gì</span>
+                <h2 class="section-title">Phản hồi từ đối tác</h2>
+            </div>
+            <div class="grid-3" style="margin-top:var(--space-2xl)">
+
+                <div class="feedback-card">
+                    <div class="feedback-card__stars">★★★★★</div>
+                    <p>"Giao hàng trước deadline 3 ngày. Vải dày dặn, đường may chắc chắn. Đội ngũ tư vấn rất nhiệt
+                        tình."</p>
+                    <div class="feedback-card__author">
+                        <div class="feedback-card__avatar"><span>NV</span></div>
+                        <div>
+                            <strong>Anh Nguyễn Văn L.</strong>
+                            <span>Giám đốc — Công ty TNHH Xây dựng Hoàng Long</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-card__stars">★★★★★</div>
+                    <p>"Đặt 2.000 bộ cho nhà máy, chất lượng đồng đều từng bộ một. In logo sắc nét, vải không ra màu sau
+                        50 lần giặt."</p>
+                    <div class="feedback-card__author">
+                        <div class="feedback-card__avatar"><span>TT</span></div>
+                        <div>
+                            <strong>Chị Trần Thị H.</strong>
+                            <span>Trưởng phòng Mua hàng — Samsung HCMC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="feedback-card__stars">★★★★★</div>
+                    <p>"Tư vấn chọn vải ESD rất chuyên nghiệp. Hiểu rõ tiêu chuẩn phòng sạch, không cần chỉnh sửa lại
+                        mẫu."</p>
+                    <div class="feedback-card__author">
+                        <div class="feedback-card__avatar"><span>PD</span></div>
+                        <div>
+                            <strong>Anh Phạm Đức T.</strong>
+                            <span>Kỹ sư trưởng — Foxconn Bắc Giang</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA BANNER -->
+    <!-- <section class="section">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Cần đặt đồng phục cho ngành nghề khác?</h2>
+                <p>Đội ngũ tư vấn sẵn sàng thiết kế giải pháp riêng cho doanh nghiệp của Quý khách — Hoàn toàn miễn phí
+                </p>
+                <div style="display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap">
+                    <a href="index.html#quote-section" class="btn btn--primary btn--lg">Nhận báo giá B2B</a>
+                    <a href="profile.html" class="btn btn--outline-white btn--lg">Tải hồ sơ năng lực</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- SCHEMA MARKUP: CollectionPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Danh mục sản phẩm theo ngành nghề",
+        "url": "https://duongthanhtin.vn/danh-muc",
+        "relatedLink": [
+            "https://baohopro.vn/blog/huong-dan-chon-vai-bao-ho",
+            "https://baohopro.vn/blog/tieu-chuan-en-iso-20471",
+            "https://baohopro.vn/blog/sai-lam-khi-dat-may-dong-phuc"
+        ]
+    }
+    </script>
+
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

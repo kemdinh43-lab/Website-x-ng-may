@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+
+# Temporary Python scripts
+*.py
+*.pyc
+__pycache__/
+
+# Mermaid diagrams (dev only)
+*.mmd
+
+# Markdown docs (dev only)
+bao_gia_website.md
+brief_requirements.md

@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dương Thành Tín | Xưởng Sản Xuất Đồng Phục & Bảo Hộ Lao Động Chuyên Nghiệp</title>
+  <meta name="description"
+    content="Dương Thành Tín - Xưởng sản xuất đồng phục bảo hộ lao động trực tiếp. Công suất lớn, quy trình chuẩn, cam kết chất lượng. Nhận báo giá B2B ngay.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <div id="header-container"></div>
+  <!-- ===== STATIC HERO (PMI MATCH) ===== -->
+  <section class="pmi-hero"
+    style="position: relative; height: 85vh; min-height: 500px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; color: white; padding-bottom: 60px;">
+    <!-- Background image -->
+    <div style="position: absolute; inset: 0; z-index: 1;">
+      <img src="images/hero_factory.png" alt="Hero Background" style="width: 100%; height: 100%; object-fit: cover;">
+      <!-- Dark Overlay -->
+      <div
+        style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11, 58, 102, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);">
+      </div>
+    </div>
+
+    <!-- Hero CTA - bottom aligned -->
+    <div class="container" style="position: relative; z-index: 2; padding: 0 20px;">
+      <a href="authority.html" class="btn"
+        style="background-color: var(--clr-accent); color: white; text-transform: uppercase; font-weight: 800; border-radius: 0; padding: 18px 48px; font-size: 16px; letter-spacing: 2px; display: inline-block; border: none; transition: all 0.3s; box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);"
+        onmouseover="this.style.backgroundColor='#ea6a0a'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 30px rgba(249, 115, 22, 0.5)'"
+        onmouseout="this.style.backgroundColor='var(--clr-accent)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(249, 115, 22, 0.4)'">
+        KHÁM PHÁ NĂNG LỰC SẢN XUẤT →
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== CAPABILITY STRIP ===== -->
+  <section
+    style="display: flex; overflow: hidden; height: 100px; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: clamp(16px, 2vw, 24px); text-transform: uppercase; letter-spacing: 1px; color: white;">
+    <div
+      style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: url('images/hero-2.png'); background-size: cover; position: relative;">
+      <div style="position: absolute; inset: 0; background-color: rgba(11, 58, 102, 0.85); z-index: 1;"></div>
+      <span style="position: relative; z-index: 3;">SẢN XUẤT ĐỒNG PHỤC</span>
+      <div
+        style="position: absolute; right: -25px; top: 0; bottom: 0; width: 52px; background-color: rgba(11, 58, 102, 0.85); transform: skewX(-20deg); z-index: 2; border-right: 4px solid white;">
+      </div>
+    </div>
+    <div
+      style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: url('images/hero-3.png'); background-size: cover; color: #0b3a66; position: relative;">
+      <div style="position: absolute; inset: 0; background-color: rgba(230, 230, 230, 0.9); z-index: 1;"></div>
+      <span style="position: relative; z-index: 3;">GIA CÔNG RẬP & MẪU</span>
+      <div
+        style="position: absolute; right: -25px; top: 0; bottom: 0; width: 52px; background-color: rgba(230, 230, 230, 0.9); transform: skewX(-20deg); z-index: 2; border-right: 4px solid white;">
+      </div>
+    </div>
+    <div
+      style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: url('images/hero-1.png'); background-size: cover; position: relative; z-index: 1;">
+      <div style="position: absolute; inset: 0; background-color: rgba(249, 115, 22, 0.85); z-index: 1;"></div>
+      <span style="position: relative; z-index: 3;">CUNG CẤP VẢI SỈ</span>
+    </div>
+  </section>
+  <!-- ===== PARTNER LOGOS (AUTO-SCROLLING INFINITE TICKER) ===== -->
+  <style>
+    .partners-ticker {
+      overflow: hidden;
+      background-color: var(--clr-primary);
+      padding: 48px 0;
+      position: relative;
+    }
+
+    .partners-ticker::before,
+    .partners-ticker::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .partners-ticker::before {
+      left: 0;
+      background: linear-gradient(to right, var(--clr-primary), transparent);
+    }
+
+    .partners-ticker::after {
+      right: 0;
+      background: linear-gradient(to left, var(--clr-primary), transparent);
+    }
+
+    .partners-ticker__label {
+      text-align: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.35);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .ticker-track {
+      display: flex;
+      gap: 0;
+      width: max-content;
+      animation: ticker-scroll 28s linear infinite;
+    }
+
+    .ticker-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes ticker-scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .ticker-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 48px;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      flex-shrink: 0;
+    }
+
+    .ticker-logo span {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(16px, 1.8vw, 24px);
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.3);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: color 0.3s, letter-spacing 0.3s;
+      white-space: nowrap;
+    }
+
+    .ticker-logo:hover span {
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 3px;
+    }
+
+    .ticker-logo--accent span {
+      color: rgba(249, 115, 22, 0.45);
+    }
+
+    .ticker-logo--accent:hover span {
+      color: rgba(249, 115, 22, 1);
+    }
+  </style>
+  <section class="partners-ticker" style="background: var(--clr-primary); padding: 50px 0; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 5px solid var(--clr-accent);">
+    <div style="text-align: center; margin-bottom: 40px;">
+        <span style="display: inline-block; padding: 6px 16px; background: rgba(249, 115, 22, 0.15); color: var(--clr-accent-light); border-radius: 30px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">KHÁCH HÀNG B2B TIÊU BIỂU</span>
+        <h2 style="color: white; font-family: 'Outfit', sans-serif; font-size: 28px; font-weight: 700; margin-top: 15px;">ĐỐI TÁC CHIẾN LƯỢC CỦA DTT</h2>
+    </div>
+    <div class="ticker-track">
+      <!-- Set 1 -->
+      <div class="ticker-logo ticker-logo--accent"><span>Samsung</span></div>
+      <div class="ticker-logo"><span>FPT Group</span></div>
+      <div class="ticker-logo"><span>Vingroup</span></div>
+      <div class="ticker-logo ticker-logo--accent"><span>Panasonic</span></div>
+      <div class="ticker-logo"><span>Hòa Phát</span></div>
+      <div class="ticker-logo"><span>LG Electronics</span></div>
+      <div class="ticker-logo ticker-logo--accent"><span>Viettel</span></div>
+      <div class="ticker-logo"><span>BIDV</span></div>
+      <div class="ticker-logo"><span>Vinpearl</span></div>
+      <div class="ticker-logo ticker-logo--accent"><span>Intel VN</span></div>
+      <div class="ticker-logo"><span>Thaco</span></div>
+      <!-- Set 2 (duplicate for infinite loop) -->
+      <div class="ticker-logo ticker-logo--accent"><span>Samsung</span></div>
+      <div class="ticker-logo"><span>FPT Group</span></div>
+      <div class="ticker-logo"><span>Vingroup</span></div>
+      <div class="ticker-logo ticker-logo--accent"><span>Panasonic</span></div>
+      <div class="ticker-logo"><span>Hòa Phát</span></div>
+      <div class="ticker-logo"><span>LG Electronics</span></div>
+      <div class="ticker-logo ticker-logo--accent"><span>Viettel</span></div>
+      <div class="ticker-logo"><span>BIDV</span></div>
+      <div class="ticker-logo"><span>Vinpearl</span></div>
+      <div class="ticker-logo ticker-logo--accent"><span>Intel VN</span></div>
+      <div class="ticker-logo"><span>Thaco</span></div>
+    </div>
+  </section>
+
+
+  <!-- ===== SỨ MỆNH (VISUAL SPLIT) ===== -->
+  <section class="pmi-split"
+    style="display: flex; flex-wrap: wrap; background-color: var(--clr-primary); color: white;">
+    <!-- Left: Video Thumbnail -->
+    <div
+      style="flex: 1 1 50%; position: relative; min-height: 400px; background-image: url('images/hero-2.png'); background-size: cover; background-position: center;">
+      <!-- Play button overlay -->
+      <div
+        style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.2);">
+        <button aria-label="Play Video"
+          style="width: 80px; height: 60px; background-color: var(--clr-accent); border: none; border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s;">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Right: Content -->
+    <div
+      style="flex: 1 1 50%; padding: 80px 8%; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden;">
+      <h2
+        style="font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">
+        <span style="font-weight: 400; color: #94a3b8;">SỨ MỆNH CỦA</span> CHÚNG TÔI
+      </h2>
+      <p style="font-size: 16px; line-height: 1.7; margin-bottom: 32px; max-width: 500px; color: #e2e8f0;">
+        Điểm khác biệt của Dương Thành Tín là chúng tôi tập trung vào việc làm cho hoạt động cung ứng đồng phục doanh
+        nghiệp trở nên dễ dàng và minh bạch hơn. Từ khâu chọn vải, rập sơ đồ đến sản xuất hàng loạt, chúng tôi hiện thực
+        hóa tiêu chuẩn an toàn trong từng đường kim mũi chỉ.
+      </p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <a href="profile.html" class="btn"
+          style="background-color: transparent; border: 2px solid rgba(255,255,255,0.6); color: white; text-transform: uppercase; font-weight: 700; padding: 14px 28px; border-radius: 0; letter-spacing: 1px;">VỀ
+          CHÚNG TÔI</a>
+        <a href="contact.html" class="btn"
+          style="background-color: var(--clr-accent); color: white; text-transform: uppercase; font-weight: 700; border-radius: 0; padding: 14px 28px; border-radius: 0; letter-spacing: 1px; border: 2px solid var(--clr-accent);">LIÊN
+          HỆ NGAY</a>
+      </div>
+      <!-- Optional decorative shape (PMI style) -->
+      <img src="images/hero-1.png" alt=""
+        style="position: absolute; right: -50px; top: -50px; width: 200px; height: 200px; object-fit: cover; opacity: 0.1; filter: grayscale(100%); border-radius: 50%; mix-blend-mode: multiply; pointer-events: none;">
+    </div>
+  </section>
+
+
+
+  <!-- ===== SERVICE CATEGORY STRIP (ANGLED DESIGN) ===== -->
+  <style>
+    .pmi-cat-item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      text-decoration: none;
+      color: white;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .pmi-cat-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .pmi-cat-item:hover .pmi-cat-overlay,
+    .pmi-cat-item:hover .pmi-cat-divider {
+      opacity: 0.8;
+    }
+
+    .pmi-cat-divider {
+      position: absolute;
+      right: -35px;
+      top: 0;
+      bottom: 0;
+      width: 70px;
+      transform: skewX(-20deg);
+      z-index: 2;
+      border-right: 4px solid white;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .pmi-cat-text {
+      position: relative;
+      z-index: 3;
+      padding: 0 20px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: clamp(20px, 2.5vw, 32px);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+    }
+
+    .pmi-cat-subtext {
+      display: block;
+      font-size: 0.5em;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+  </style>
+  <section class="pmi-category-strip" style="display: flex; overflow: hidden; height: 350px;">
+    <!-- Item 1 -->
+    <a href="product.html" class="pmi-cat-item" style="background-image: url('images/product-main.png');">
+      <div class="pmi-cat-overlay" style="background-color: rgba(11, 58, 102, 0.9);"></div>
+      <div class="pmi-cat-text">
+        ĐỒNG PHỤC BẢO HỘ<span class="pmi-cat-subtext">FDI / CÔNG NGHIỆP</span>
+      </div>
+      <div class="pmi-cat-divider" style="background-color: rgba(11, 58, 102, 0.9);"></div>
+    </a>
+    <!-- Item 2 -->
+    <a href="product.html" class="pmi-cat-item" style="background-image: url('images/product-winter.png');">
+      <div class="pmi-cat-overlay" style="background-color: rgba(249, 115, 22, 0.9);"></div>
+      <div class="pmi-cat-text">
+        ĐỒNG PHỤC Y TẾ<span class="pmi-cat-subtext">PHÒNG SẠCH</span>
+      </div>
+      <div class="pmi-cat-divider" style="background-color: rgba(249, 115, 22, 0.9);"></div>
+    </a>
+    <!-- Item 3 -->
+    <a href="product.html" class="pmi-cat-item"
+      style="background-image: url('images/product-uniform.png'); z-index: 1;">
+      <div class="pmi-cat-overlay" style="background-color: rgba(11, 58, 102, 0.9);"></div>
+      <div class="pmi-cat-text">
+        ÁO THUN POLO<span class="pmi-cat-subtext">DOANH NGHIỆP</span>
+      </div>
+    </a>
+  </section>
+  <!-- ===== B2B COLLABORATION PROCESS (PREMIUM VISUAL TIMELINE) ===== -->
+  <style>
+    .premium-process {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+    }
+
+    .premium-process::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, transparent, var(--clr-accent) 15%, var(--clr-accent) 85%, transparent);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .proc-step {
+      display: grid;
+      grid-template-columns: 1fr 80px 1fr;
+      align-items: center;
+      min-height: 200px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .proc-step__card {
+      background: white;
+      padding: 32px 36px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    }
+
+    .proc-step__card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+      border-color: var(--clr-accent);
+    }
+
+    .proc-step__center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .proc-step__num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--clr-primary);
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px solid white;
+      box-shadow: 0 0 0 2px var(--clr-accent);
+      flex-shrink: 0;
+    }
+
+    .proc-step__tag {
+      display: inline-block;
+      background: var(--clr-accent);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .proc-step__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--clr-primary);
+      margin-bottom: 8px;
+    }
+
+    .proc-step__desc {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .proc-step__img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Odd: card left, photo right */
+    .proc-step:nth-child(odd) .proc-step__left {
+      order: 1;
+      padding-right: 30px;
+    }
+
+    .proc-step:nth-child(odd) .proc-step__center {
+      order: 2;
+    }
+
+    .proc-step:nth-child(odd) .proc-step__right {
+      order: 3;
+      padding-left: 30px;
+    }
+
+    /* Even: photo left, card right */
+    .proc-step:nth-child(even) .proc-step__left {
+      order: 3;
+      padding-left: 30px;
+    }
+
+    .proc-step:nth-child(even) .proc-step__center {
+      order: 2;
+    }
+
+    .proc-step:nth-child(even) .proc-step__right {
+      order: 1;
+      padding-right: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .premium-process::before {
+        left: 28px;
+        transform: none;
+      }
+
+      .proc-step {
+        grid-template-columns: 56px 1fr;
+        gap: 12px;
+        min-height: auto;
+        padding: 16px 0;
+      }
+
+      .proc-step:nth-child(odd) .proc-step__left,
+      .proc-step:nth-child(even) .proc-step__left,
+      .proc-step:nth-child(odd) .proc-step__right,
+      .proc-step:nth-child(even) .proc-step__right {
+        order: unset !important;
+        padding: 0 !important;
+      }
+
+      .proc-step__center {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: start;
+        padding-top: 8px;
+      }
+
+      .proc-step__card {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 20px;
+      }
+
+      .proc-step__img {
+        display: none;
+      }
+    }
+  </style>
+
+  <section class="strip-section bg-gray reveal reveal-up" id="process"
+    style="padding-top: 100px; padding-bottom: 100px;">
+    <div class="container">
+      <div class="section-header text-center" style="margin-bottom: 72px;">
+        <span class="section-label"
+          style="color: var(--clr-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Quy trình
+          SOP chuẩn</span>
+        <h2 class="section-title"
+          style="font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--clr-primary); text-transform: uppercase;">
+          4 BƯỚC GIA CÔNG KHÉP KÍN</h2>
+        <p class="section-subtitle mx-auto" style="max-width: 580px;">Hệ thống quản lý đồng bộ — minh bạch tiến độ, kiểm
+          soát chất lượng 100%, bàn giao đúng hạn cho mọi đơn hàng B2B.</p>
+      </div>
+
+      <div class="premium-process">
+        <!-- Step 1 -->
+        <div class="proc-step">
+          <div class="proc-step__left">
+            <div class="proc-step__card">
+              <span class="proc-step__tag">Bước 01</span>
+              <h4 class="proc-step__title">Tư vấn giải pháp &amp; Báo giá 24h</h4>
+              <p class="proc-step__desc">Chuyên gia phân tích môi trường làm việc, tư vấn chất liệu, phong cách thiết kế
+                và xuất báo giá chi tiết trong vòng 24 giờ.</p>
+            </div>
+          </div>
+          <div class="proc-step__center">
+            <div class="proc-step__num">01</div>
+          </div>
+          <div class="proc-step__right">
+            <img class="proc-step__img" src="images/factory-1.png" alt="Tư vấn đồng phục" loading="lazy">
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="proc-step">
+          <div class="proc-step__left">
+            <img class="proc-step__img" src="images/factory-2.png" alt="Gia công rập mẫu" loading="lazy">
+          </div>
+          <div class="proc-step__center">
+            <div class="proc-step__num">02</div>
+          </div>
+          <div class="proc-step__right">
+            <div class="proc-step__card">
+              <span class="proc-step__tag">Bước 02</span>
+              <h4 class="proc-step__title">Gia công rập &amp; May mẫu thực tế</h4>
+              <p class="proc-step__desc">Rập sơ đồ vi tính chính xác. May 1 bộ mẫu thực để khách hàng kiểm tra form
+                dáng, chất vải và xác nhận trước khi sản xuất đại trà.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="proc-step">
+          <div class="proc-step__left">
+            <div class="proc-step__card">
+              <span class="proc-step__tag">Bước 03</span>
+              <h4 class="proc-step__title">Sản xuất &amp; QC/KCS 100%</h4>
+              <p class="proc-step__desc">Chuyền may khép kín, cắt vải tự động. Cán bộ KCS kiểm tra 100% sản phẩm: đường
+                kim, mũi chỉ, giáp nối và vệ sinh công nghiệp trước đóng gói.</p>
+            </div>
+          </div>
+          <div class="proc-step__center">
+            <div class="proc-step__num">03</div>
+          </div>
+          <div class="proc-step__right">
+            <img class="proc-step__img" src="images/factory-3.png" alt="Kiểm soát chất lượng" loading="lazy">
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="proc-step">
+          <div class="proc-step__left">
+            <img class="proc-step__img" src="images/factory-4.png" alt="Đóng gói bàn giao" loading="lazy">
+          </div>
+          <div class="proc-step__center">
+            <div class="proc-step__num">04</div>
+          </div>
+          <div class="proc-step__right">
+            <div class="proc-step__card">
+              <span class="proc-step__tag">Bước 04</span>
+              <h4 class="proc-step__title">Đóng gói kháng khuẩn &amp; Bàn giao</h4>
+              <p class="proc-step__desc">Ủi hơi công nghiệp, đóng gói màng co kháng khuẩn theo từng size và bộ phận. Bàn
+                giao tận nơi, kèm mã vạch quản lý kho thông minh.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CASE STUDIES ===== -->
+  <section class="section bg-white reveal reveal-up" id="case-studies" style="padding: 100px 0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-header text-center" style="margin-bottom: 60px;">
+        <span class="section-label"
+          style="color: var(--clr-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Dự án tiêu biểu</span>
+        <h2 class="section-title"
+          style="font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--clr-primary); text-transform: uppercase;">
+          CASE STUDY TRIỂN KHAI THỰC TẾ</h2>
+        <p class="section-subtitle mx-auto" style="max-width: 600px;">Những giải pháp đồng phục chuyên biệt được chúng tôi thực hiện thành công cho các đối tác chiến lược.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+        <!-- Card Daiwa -->
+        <div style="background: var(--clr-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
+            <img src="images/daiwa_real.jpg" alt="Daiwa Case Study" style="width: 100%; height: 220px; object-fit: cover;">
+            <div style="padding: 30px;">
+                <h3 style="font-family: 'Outfit'; font-size: 20px; font-weight: 700; color: var(--clr-primary); margin-bottom: 12px; text-transform: uppercase;">Triển Khai Đồng Phục Kỹ Thuật Daiwa</h3>
+                <p style="color: var(--clr-text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">Sản xuất 1.500 áo bảo hộ chống tĩnh điện màng ESD cao cấp, đáp ứng tiêu chuẩn nghiêm ngặt của nhà máy sản xuất cần câu cá Nhật Bản Daiwa tại Đà Nẵng.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span style="background: rgba(11, 58, 102, 0.1); color: var(--clr-primary); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#ChốngTĩnhĐiện</span>
+                    <span style="background: rgba(11, 58, 102, 0.1); color: var(--clr-primary); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#Daiwa</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card Foster -->
+        <div style="background: var(--clr-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
+            <img src="images/foster_real.jpg" alt="Foster Case Study" style="width: 100%; height: 220px; object-fit: cover;">
+            <div style="padding: 30px;">
+                <h3 style="font-family: 'Outfit'; font-size: 20px; font-weight: 700; color: var(--clr-primary); margin-bottom: 12px; text-transform: uppercase;">Đồng Phục Dây Chuyền Foster</h3>
+                <p style="color: var(--clr-text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">Cung ứng liên tục 3.000+ bộ quần áo bảo hộ linh kiện điện tử mỗi năm. Tối ưu thiết kế túi tiện dụng và form dáng thoải mái cho công nhân viên Foster.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span style="background: rgba(249, 115, 22, 0.1); color: var(--clr-accent); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#ĐiệnTử</span>
+                    <span style="background: rgba(249, 115, 22, 0.1); color: var(--clr-accent); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#SảnXuấtFDI</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card SunGroup / Others -->
+        <div style="background: var(--clr-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
+            <img src="images/resort_real.jpg" alt="Hospitality Case Study" style="width: 100%; height: 220px; object-fit: cover;">
+            <div style="padding: 30px;">
+                <h3 style="font-family: 'Outfit'; font-size: 20px; font-weight: 700; color: var(--clr-primary); margin-bottom: 12px; text-transform: uppercase;">Dự Án Áo Polo Sự Kiện Resort</h3>
+                <p style="color: var(--clr-text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">Thiết kế và dệt nhuộm màu vải riêng biệt theo nhận diện thương hiệu cho chuỗi resort cao cấp. Cam kết màu sắc ổn định xuyên suốt các lô hàng qua nhiều năm.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span style="background: rgba(8, 148, 161, 0.1); color: #0894a1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#ÁoPolo</span>
+                    <span style="background: rgba(8, 148, 161, 0.1); color: #0894a1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#MàuThươngHiệu</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== TESTIMONIALS SECTION (PREMIUM DARK LAYOUT) ===== -->
+  <style>
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .testi-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 40px 32px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testi-card::before {
+      content: '"';
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 150px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.04);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(249, 115, 22, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .testi-card--featured {
+      background: linear-gradient(145deg, rgba(249, 115, 22, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+      border: 1px solid rgba(249, 115, 22, 0.3);
+    }
+
+    .testi-card__stars {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 24px;
+    }
+
+    .testi-card__stars svg {
+      fill: #fbbf24;
+      width: 20px;
+      height: 20px;
+    }
+
+    .testi-card__quote {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+      flex-grow: 1;
+      margin-bottom: 32px;
+      font-style: italic;
+      font-family: 'Inter', sans-serif;
+      position: relative;
+      z-index: 2;
+    }
+
+    .testi-card__profile {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+    }
+
+    .testi-card__avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--clr-accent);
+      flex-shrink: 0;
+    }
+
+    .testi-card__name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: #ffffff;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .testi-card__role {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: 'Inter', sans-serif;
+    }
+
+    @media (max-width: 992px) {
+      .testi-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .testi-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <section class="section fade-on-scroll" id="testimonials" style="padding: 100px 0; background-color: #0c1524; position: relative;">
+    <!-- Background grid decoration -->
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.5;"></div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="section-header text-center" style="margin-bottom: 80px;">
+        <span class="section-label"
+          style="display: inline-block; background: rgba(249, 115, 22, 0.15); color: var(--clr-accent-light); padding: 8px 24px; border-radius: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+          Khách hàng B2B
+        </span>
+        <h2 class="section-title"
+          style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 5vw, 48px); font-weight: 800; color: #ffffff; text-transform: uppercase;">
+          3.500+ DOANH NGHIỆP ĐÃ TIN TƯỞNG
+        </h2>
+        <p class="section-subtitle mx-auto" style="max-width: 600px; color: rgba(255, 255, 255, 0.7); font-size: 18px; line-height: 1.6;">
+          Từ tập đoàn FDI đến doanh nghiệp vừa và nhỏ — chúng tôi cung cấp đồng phục bảo hộ đạt chuẩn, đúng hạn và minh bạch.
+        </p>
+      </div>
+
+      <div class="testi-grid">
+        <!-- Card 1 (featured) -->
+        <div class="testi-card testi-card--featured">
+          <div class="testi-card__stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+          </div>
+          <p class="testi-card__quote">"Chúng tôi đặt 2.000 bộ đồng phục bảo hộ cho toàn bộ nhà máy. Dương Thành Tín
+            giao đúng hạn, chất lượng đường may vượt kỳ vọng. Sai số size gần như bằng 0 — điều rất ít xưởng nào đạt
+            được với đơn hàng lớn."</p>
+          <div class="testi-card__profile">
+            <img class="testi-card__avatar" src="https://i.pravatar.cc/150?u=manager1" alt="Nguyễn Minh Khoa">
+            <div>
+              <div class="testi-card__name">Nguyễn Minh Khoa</div>
+              <div class="testi-card__role">Trưởng phòng Mua hàng<br>Samsung Electro-Mechanics</div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="testi-card">
+          <div class="testi-card__stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+          </div>
+          <p class="testi-card__quote">"Quy trình đặt hàng rất chuyên nghiệp, từ tư vấn mẫu đến duyệt mẫu thực tế. Team
+            hỗ trợ phản hồi nhanh, báo giá minh bạch. Chúng tôi đã đồng hành liên tục 3 năm."</p>
+          <div class="testi-card__profile">
+            <img class="testi-card__avatar" src="https://i.pravatar.cc/150?u=hr2" alt="Trần Thị Lan">
+            <div>
+              <div class="testi-card__name">Trần Thị Lan</div>
+              <div class="testi-card__role">HR Manager<br>FPT Software Đà Nẵng</div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="testi-card">
+          <div class="testi-card__stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+          </div>
+          <p class="testi-card__quote">"Đã thử 4–5 xưởng nhưng vẫn gặp chênh màu và co size sau giặt. Kể từ khi hợp tác
+            với Dương Thành Tín thì sự cố đó không còn. Rất hài lòng về kiểm soát chất lượng màu vải."</p>
+          <div class="testi-card__profile">
+            <img class="testi-card__avatar" src="https://i.pravatar.cc/150?u=pro3" alt="Phan Đức Anh">
+            <div>
+              <div class="testi-card__name">Phan Đức Anh</div>
+              <div class="testi-card__role">Giám đốc Vận hành<br>Vinpearl Resort &amp; Spa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS SECTION ===== -->
+
+  <!-- ===== VALUE PROPOSITION ===== -->
+  <section class="pmi-value-prop" style="padding: 100px 20px; text-align: center; background-color: white;">
+    <div class="container"
+      style="display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap; max-width: 1000px;">
+      <div style="flex: 1 1 300px; text-align: left; position: relative;">
+        <!-- geometric decoration -->
+        <div
+          style="position: absolute; top: -60px; left: -40px; width: 120px; height: 180px; background-color: #cbd5e1; clip-path: polygon(100% 0, 0 100%, 100% 100%); z-index: 1;">
+        </div>
+        <div
+          style="position: absolute; top: 0px; left: 0px; width: 100px; height: 120px; background-color: var(--clr-primary); clip-path: polygon(0 0, 100% 100%, 0 100%); z-index: 2;">
+        </div>
+        <div
+          style="position: absolute; top: 40px; left: 30px; width: 80px; height: 100px; background-color: var(--clr-accent); clip-path: polygon(100% 0, 0 0, 50% 100%); z-index: 3;">
+        </div>
+        <img src="images/factory-1.png" alt=""
+          style="width: 100%; max-width: 400px; position: relative; z-index: 4; border-radius: 2px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);">
+      </div>
+      <div style="flex: 2 1 400px; text-align: left;">
+        <h2
+          style="font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 42px); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--clr-primary); margin-bottom: 24px; line-height: 1.1;">
+          <span style="font-weight: 400; color: #64748b;">CHÚNG TÔI CÓ THỂ LÀM GÌ</span><br>CHO TỔ CHỨC CỦA BẠN?
+        </h2>
+        <p style="font-size: 16px; color: #475569; line-height: 1.7; margin-bottom: 24px;">
+          Dương Thành Tín làm việc với nhiều ngành công nghiệp khi nói đến sản xuất đồng phục. Từ áo bảo hộ kaki chịu
+          lực, áo phông văn phòng đến đồng phục phòng sạch y tế, chúng tôi thiết kế và may mặc theo giải pháp riêng của
+          từng khách hàng.
+        </p>
+        <p style="font-size: 16px; color: #475569;">
+          Xem thêm về <a href="authority.html"
+            style="color: var(--clr-accent); font-weight: 700; text-decoration: underline;">chuyên môn kỹ thuật và quy
+            trình kiểm định của chúng tôi</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DUAL CTA SECTION ===== -->
+  <section class="pmi-dual-cta" style="display: flex; flex-wrap: wrap; min-height: 480px;">
+    <!-- CTA 1: Request a Quote -->
+    <div
+      style="flex: 1 1 50%; padding: 80px 10%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; background-image: url('images/factory-1.png'); background-size: cover; background-position: center; color: white;">
+      <div style="position: absolute; inset: 0; background-color: rgba(15, 23, 42, 0.85); z-index: 1;"></div>
+      <div style="position: relative; z-index: 2;">
+        <h2
+          style="font-family: 'Outfit', sans-serif; font-size: 32px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #ffffff;">
+          TƯ VẤN & BÁO GIÁ<br><span style="font-weight: 400; color: #f97316;">ĐỒNG PHỤC DOANH NGHIỆP</span></h2>
+        <p
+          style="font-size: 16px; line-height: 1.6; margin-bottom: 32px; color: #cbd5e1; max-width: 420px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif;">
+          Chuyên gia của Dương Thành Tín sẵn sàng hỗ trợ bạn thiết kế và cung cấp giải pháp đồng phục tối ưu với ngân sách doanh nghiệp.</p>
+        <a href="contact.html" class="btn"
+          style="background-color: #f97316; color: white; border: none; text-transform: uppercase; font-weight: 800; border-radius: 4px; padding: 14px 40px; letter-spacing: 1.5px; box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);">NHẬN BÁO GIÁ NGAY</a>
+      </div>
+    </div>
+    <!-- CTA 2: Recruitment / Partners -->
+    <div
+      style="flex: 1 1 50%; padding: 80px 10%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; background-image: url('images/factory-2.png'); background-size: cover; background-position: center; color: white;">
+      <div style="position: absolute; inset: 0; background-color: rgba(11, 58, 102, 0.9); z-index: 1;"></div>
+      <div style="position: relative; z-index: 2;">
+        <h2
+          style="font-family: 'Outfit', sans-serif; font-size: 32px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #ffffff;">
+          TRỞ THÀNH ĐỐI TÁC<br><span style="font-weight: 400; color: #38bdf8;">CHIẾN LƯỢC CỦA DTT</span></h2>
+        <p
+          style="font-size: 16px; line-height: 1.6; margin-bottom: 32px; color: #e0f2fe; max-width: 420px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif;">
+          Chúng tôi luôn tìm kiếm cơ hội hợp tác xuất khẩu, gia công số lượng lớn và đại lý phân phối trên toàn quốc với chính sách minh bạch.</p>
+        <a href="contact.html" class="btn"
+          style="background-color: transparent; color: white; border: 2px solid #38bdf8; text-transform: uppercase; font-weight: 800; border-radius: 4px; padding: 14px 40px; letter-spacing: 1.5px; transition: all 0.3s;">KẾT NỐI HỢP TÁC</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUALITY STANDARDS (Industrial Premium Redesign) ===== -->
+
+
+  <!-- ===== CAPABILITY PDF MODAL (UI ONLY) ===== -->
+  <div class="pdf-modal" id="capabilityPdfModalPopup" aria-hidden="true">
+    <div class="pdf-modal__overlay"></div>
+    <div class="pdf-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="capabilityModalTitle">
+      <button class="pdf-modal__close" type="button" aria-label="Đóng" style="border-radius: 0;">
+        <svg viewBox="0 0 24 24">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <div class="pdf-modal__grid" style="border-radius: 0;">
+        <!-- Left: Book cover -->
+        <aside class="pdf-modal__left" style="background: var(--clr-primary); border-radius: 0;">
+          <div class="book-cover-card" style="border-radius: 0;">
+            <span class="book-cover-card__tag" style="border-radius: 0;">PDF miễn phí</span>
+            <div class="book-cover-card__body">
+              <span class="book-cover-card__logo">BảoHộ Pro</span>
+              <h3 class="book-cover-card__title">Hồ sơ năng lực xưởng bảo hộ</h3>
+              <p class="book-cover-card__subtitle">Thông số máy móc, quy trình SOP, năng lực sản xuất cập nhật.</p>
+            </div>
+          </div>
+          <p class="book-cover-card__meta">Phiên bản 2026 &mdash; cập nhật theo dự án mới nhất.</p>
+        </aside>
+
+        <!-- Right: Content + form (UI only) -->
+        <section class="pdf-modal__right">
+          <header class="pdf-modal__header">
+            <span class="pdf-modal__tag" style="border-radius: 0;">Tài liệu cho Thu mua / Manager</span>
+            <h2 id="capabilityModalTitle" class="pdf-modal__title">Download Hồ Sơ Năng Lực Xưởng (PDF)</h2>
+            <p class="pdf-modal__subtitle">
+              Bộ tài liệu tóm tắt năng lực sản xuất, quy trình kiểm soát chất lượng và checklist hỗ trợ bạn đánh giá
+              nhanh mức độ phù hợp của xưởng cho các dự án B2B.
+            </p>
+          </header>
+
+          <ul class="pdf-modal__benefits">
+            <li>
+              <span class="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span>Checklist kiểm soát tiến độ &amp; chất lượng</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span>Quy trình SOP 4 bước minh bạch</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span>Thông số năng lực xưởng &amp; năng suất thực tế</span>
+            </li>
+            <li>
+              <span class="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span>Mẫu yêu cầu báo giá chuẩn B2B dùng lại nhiều lần</span>
+            </li>
+          </ul>
+
+          <form class="pdf-modal__form" aria-label="Form tải hồ sơ năng lực (UI)">
+            <div class="pdf-modal__form-grid">
+              <div class="pdf-field">
+                <label for="pdfName">Họ tên *</label>
+                <input id="pdfName" type="text" placeholder="Nguyễn Văn A" style="border-radius: 0;">
+              </div>
+              <div class="pdf-field">
+                <label for="pdfEmail">Email công ty *</label>
+                <input id="pdfEmail" type="email" placeholder="email@company.com" style="border-radius: 0;">
+              </div>
+              <div class="pdf-field">
+                <label for="pdfCompany">Tên công ty *</label>
+                <input id="pdfCompany" type="text" placeholder="Công ty TNHH ABC" style="border-radius: 0;">
+              </div>
+              <div class="pdf-field">
+                <label for="pdfPhone">Số điện thoại</label>
+                <input id="pdfPhone" type="tel" placeholder="0905 123 456" style="border-radius: 0;">
+              </div>
+            </div>
+
+            <button type="button" class="pdf-modal__cta" style="border-radius: 0;">
+              NHẬN TÀI LIỆU
+            </button>
+            <p class="pdf-modal__note">
+              Không spam. Bạn có thể huỷ nhận email bất cứ lúc nào.
+            </p>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div id="footer-container"></div>
+  <!-- Schema Markup: LocalBusiness + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Dương Thành Tín",
+    "description": "Xưởng sản xuất đồng phục bảo hộ lao động trực tiếp. Công suất 15.000 bộ/tháng.",
+    "url": "https://duongthanhtin.vn",
+    "telephone": "+84905123456",
+    "email": "info@duongthanhtin.vn",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lô 45, KCN Hòa Khánh",
+      "addressLocality": "Liên Chiểu",
+      "addressRegion": "Đà Nẵng",
+      "addressCountry": "VN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "16.0678",
+      "longitude": "108.1534"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "07:30",
+      "closes": "17:30"
+    },
+    "taxID": "0401234567",
+    "founder": {
+      "@type": "Person",
+      "name": "Nguyễn Văn Minh",
+      "jobTitle": "Giám đốc"
+    },
+    "sameAs": [
+      "https://www.facebook.com/baohopro",
+      "https://www.youtube.com/@baohopro"
+    ],
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": 50,
+      "maxValue": 100
+    }
+  }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
