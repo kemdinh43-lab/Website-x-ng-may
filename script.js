@@ -1526,3 +1526,123 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* HIDING LIVE EDIT MODE FOR NOW
+/* ==========================================================================
+   LIVE EDIT MODE: TEXT & IMAGE EDITING
+   ========================================================================== */
+(function() {
+    // ── Inject Styles ──────────────────────────────────────────────────────
+    const style = document.createElement('style');
+    style.textContent = `
+        #le-panel{position:fixed;bottom:20px;right:20px;z-index:99999;display:flex;flex-direction:column;align-items:flex-end;gap:8px;font-family:'Inter',sans-serif}
+        #le-panel button{padding:10px 20px;border:none;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.25);transition:.2s}
+        #le-toggle{background:#10b981;color:#fff}
+        #le-toggle.on{background:#ef4444}
+        #le-save{background:#3b82f6;color:#fff;display:none}
+        #le-tip{background:#fff;padding:8px 14px;border-radius:8px;font-size:12px;color:#374151;border-left:4px solid #f59e0b;max-width:260px;display:none;line-height:1.5}
+        .is-editing [contenteditable]:hover{outline:2px dotted #10b981;outline-offset:2px}
+        .is-editing [contenteditable]:focus{outline:2px solid #10b981;outline-offset:2px;background:rgba(16,185,129,.06)}
+        .is-editing img:hover{outline:2px dotted #f59e0b;outline-offset:2px;cursor:crosshair}
+    `;
+    document.head.appendChild(style);
+
+    // ── Build UI ───────────────────────────────────────────────────────────
+    const panel = document.createElement('div');
+    panel.id = 'le-panel';
+    panel.innerHTML = `
+        <div id="le-tip">✏️ Nhấp để sửa chữ<br>🖼️ Nhấp đúp vào ảnh để đổi ảnh<br>Xong → nhấn <b>Lưu trang</b></div>
+        <button id="le-save">💾 Lưu trang</button>
+        <button id="le-toggle">✏️ BẬT CHỈNH SỬA</button>
+    `;
+    document.body.appendChild(panel);
+
+    const toggleBtn = document.getElementById('le-toggle');
+    const saveBtn   = document.getElementById('le-save');
+    const tip       = document.getElementById('le-tip');
+
+    // ── File input for images ──────────────────────────────────────────────
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file'; fileInput.accept = 'image/*'; fileInput.style.display = 'none';
+    document.body.appendChild(fileInput);
+    let activeImg = null;
+
+    // ── Edit Mode Toggle ───────────────────────────────────────────────────
+    const EDITABLE = 'h1,h2,h3,h4,h5,h6,p,span,a,li,b,i,strong,em,td,th,label';
+    let editMode = false;
+
+    // ── Block navigation when editing ─────────────────────────────────────
+    function blockNav(e) {
+        const a = e.target.closest('a');
+        if (a) { e.preventDefault(); e.stopPropagation(); }
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        editMode = !editMode;
+        document.body.classList.toggle('is-editing', editMode);
+        document.querySelectorAll(EDITABLE).forEach(el => el.contentEditable = editMode);
+        toggleBtn.textContent = editMode ? '🔴 TẮT CHỈNH SỬA' : '✏️ BẬT CHỈNH SỬA';
+        toggleBtn.classList.toggle('on', editMode);
+        saveBtn.style.display = editMode ? 'block' : 'none';
+        tip.style.display     = editMode ? 'block' : 'none';
+        // Lock / unlock navigation
+        if (editMode) {
+            document.addEventListener('click', blockNav, true);
+        } else {
+            document.removeEventListener('click', blockNav, true);
+        }
+    });
+
+    // ── Image Replace (dblclick) ───────────────────────────────────────────
+    document.addEventListener('dblclick', e => {
+        if (e.target.tagName === 'IMG') { activeImg = e.target; fileInput.click(); }
+    });
+
+    fileInput.addEventListener('change', e => {
+        const file = e.target.files[0];
+        if (!file || !activeImg) return;
+        const reader = new FileReader();
+        reader.onload = ev => {
+            activeImg.src = ev.target.result;
+            activeImg.dataset.newImageName = file.name;
+        };
+        reader.readAsDataURL(file);
+        fileInput.value = '';
+    });
+
+    // ── Save / Export ──────────────────────────────────────────────────────
+    saveBtn.addEventListener('click', () => {
+        // Collect changed images before touching DOM
+        const images = [];
+        document.querySelectorAll('img[data-new-image-name]').forEach(img => {
+            images.push({ name: img.dataset.newImageName, base64: img.src });
+            img.src = 'images/' + img.dataset.newImageName;
+            img.removeAttribute('data-new-image-name');
+        });
+
+        // Remove editing artifacts from DOM
+        document.querySelectorAll(EDITABLE).forEach(el => el.removeAttribute('contentEditable'));
+        document.body.classList.remove('is-editing');
+        panel.style.display = 'none';
+
+        const pageName = location.pathname.split('/').pop() || 'index.html';
+        const payload = JSON.stringify({ page: pageName, html: document.documentElement.outerHTML, images });
+
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([payload], { type: 'application/json' }));
+        a.download = pageName.replace('.html', '') + '_edits.json';
+        a.click();
+
+        // Reset UI
+        panel.style.display = 'flex';
+        editMode = false;
+        toggleBtn.textContent = '✏️ BẬT CHỈNH SỬA';
+        toggleBtn.classList.remove('on');
+        saveBtn.style.display = 'none';
+        tip.style.display = 'none';
+
+        alert('✅ Đã lưu "' + a.download + '" vào Downloads!\nBáo AI: trang nào xong để AI cập nhật code.');
+    });
+})();
+*/
+

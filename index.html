@@ -1,69 +1,227 @@
 <!DOCTYPE html>
-<html lang="vi">
-
-<head>
+<html lang="vi"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dương Thành Tín | Xưởng Sản Xuất Đồng Phục & Bảo Hộ Lao Động Chuyên Nghiệp</title>
-  <meta name="description"
-    content="Dương Thành Tín - Xưởng sản xuất đồng phục bảo hộ lao động trực tiếp. Công suất lớn, quy trình chuẩn, cam kết chất lượng. Nhận báo giá B2B ngay.">
+  <title>Dương Thành Tín | Xưởng Sản Xuất Đồng Phục &amp; Bảo Hộ Lao Động Chuyên Nghiệp</title>
+  <meta name="description" content="Dương Thành Tín - Xưởng sản xuất đồng phục bảo hộ lao động trực tiếp. Công suất lớn, quy trình chuẩn, cam kết chất lượng. Nhận báo giá B2B ngay.">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body style="" class="">
 
   <!-- ===== HEADER ===== -->
-  <div id="header-container"></div>
+  <header class="header header--scrolled" id="header">
+    <!-- Scrolling Top Bar -->
+    <div class="topbar topbar--marquee" style="background-color: var(--clr-primary); color: white; padding: 8px 0; font-size: 13px; position: relative;">
+        <div class="container" style="display: flex; align-items: center; overflow: hidden; position: relative;">
+            <div class="topbar__left" style="flex-grow: 1; overflow: hidden; position: relative;">
+                <div class="topbar__marquee-track" style="font-weight: 700;">
+                    BẠN CẦN HỖ TRỢ? HÃY GỌI NGAY CHO CHÚNG TÔI QUA HOTLINE: <a href="tel:0905123456" style="color: var(--clr-accent-light); border: none;">0905.123.456</a> &nbsp;&nbsp;•&nbsp;&nbsp;
+                    BẠN CẦN HỖ TRỢ? HÃY GỌI NGAY CHO CHÚNG TÔI QUA HOTLINE: <a href="tel:0905123456" style="color: var(--clr-accent-light); border: none;">0905.123.456</a> &nbsp;&nbsp;•&nbsp;&nbsp;
+                    BẠN CẦN HỖ TRỢ? HÃY GỌI NGAY CHO CHÚNG TÔI QUA HOTLINE: <a href="tel:0905123456" style="color: var(--clr-accent-light); border: none;">0905.123.456</a> &nbsp;&nbsp;•&nbsp;&nbsp;
+                    BẠN CẦN HỖ TRỢ? HÃY GỌI NGAY CHO CHÚNG TÔI QUA HOTLINE: <a href="tel:0905123456" style="color: var(--clr-accent-light); border: none;">0905.123.456</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main nav -->
+    <div class="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__logo">
+                <div class="navbar__logo-icon" style="background: transparent; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+                    <img src="images/logo-new.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4);">
+                </div>
+                <div class="navbar__logo-text">
+                    <span style="color: #0B3A66; font-weight: 800; font-size: 0.8rem;">DƯƠNG THÀNH TÍN</span>
+                </div>
+            </a>
+
+<style>
+/* ===== HƯỚNG DẪN DROPDOWN ===== */
+.navbar__nav .nav-dropdown {
+    position: relative;
+}
+.navbar__nav .nav-dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.navbar__nav .nav-dropdown > a::after {
+    content: '';
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    transition: transform 0.2s;
+    margin-top: 1px;
+}
+.navbar__nav .nav-dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 240px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.14);
+    z-index: 1000;
+    overflow: hidden;
+    border-top: 3px solid #F37021;
+}
+.navbar__nav .nav-dropdown:hover .dropdown-menu {
+    display: block;
+    animation: dropIn 0.18s ease;
+}
+@keyframes dropIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    font-size: 14px;
+    color: #333 !important;
+    text-decoration: none;
+    border-bottom: 1px solid #f5f5f5;
+    transition: background 0.15s, color 0.15s;
+    font-weight: 500 !important;
+}
+.dropdown-menu a:last-child { border-bottom: none; }
+.dropdown-menu a:hover { background: #fff8f5; color: #F37021 !important; }
+.dropdown-menu .dm-icon {
+    width: 32px; height: 32px;
+    background: rgba(243,112,33,0.1);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+.dropdown-menu .dm-icon svg { color: #F37021; }
+.dropdown-menu .dm-text { display: flex; flex-direction: column; gap: 2px; }
+.dropdown-menu .dm-title { font-size: 13.5px; font-weight: 700; color: #0F2A44; }
+.dropdown-menu a:hover .dm-title { color: #F37021; }
+.dropdown-menu .dm-sub { font-size: 11px; color: #aaa; font-weight: 400; }
+</style>
+
+            <nav class="navbar__nav" id="mainNav">
+                <a href="index.html" class="active">Trang Chủ</a>
+                <a href="profile.html">Giới thiệu</a>
+                <a href="category.html">Sản phẩm</a>
+                <div class="nav-dropdown">
+                    <a href="#">Hướng dẫn</a>
+                    <div class="dropdown-menu">
+                        <a href="guide-order.html">
+                            <span class="dm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14l-4-4 4-4M5 10h14"></path></svg></span>
+                            <span class="dm-text">
+                                <span class="dm-title">Hướng dẫn đặt hàng</span>
+                                <span class="dm-sub">Quy trình đặt may từ A–Z</span>
+                            </span>
+                        </a>
+                        <a href="handbook.html">
+                            <span class="dm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span>
+                            <span class="dm-text">
+                                <span class="dm-title">Hướng dẫn bộ phận thu mua</span>
+                                <span class="dm-sub">Tài liệu cho phòng mua hàng</span>
+                            </span>
+                        </a>
+                        <a href="guide-size.html">
+                            <span class="dm-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM9 3v18M15 3v18"></path></svg></span>
+                            <span class="dm-text">
+                                <span class="dm-title">Hướng dẫn chọn size</span>
+                                <span class="dm-sub">Bảng size chuẩn theo từng dòng sản phẩm</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <a href="blog.html">Tin Tức</a>
+                <a href="contact.html">Liên Hệ</a>
+            </nav>
+
+
+            <div class="navbar__actions">
+                <!-- Hotline -->
+                <!-- <a href="tel:0905123456" class="navbar__hotline" data-track="click_hotline">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                    </svg>
+                    <span>Hotline: 0905.123.456</span>
+                </a> -->
+
+                <!-- Search toggle -->
+                <!-- <button class="navbar__search-btn" id="searchToggle" aria-label="Tìm kiếm">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                </button> -->
+
+                <!-- CTA -->
+                <a href="contact.html" class="btn btn--accent" data-track="cta_quote_header">Nhận báo giá</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search dropdown -->
+        <div class="navbar__search" id="navSearch">
+            <div class="container">
+                <form class="navbar__search-form">
+                    <input type="search" placeholder="Tìm sản phẩm, bài viết..." aria-label="Tìm kiếm">
+                    <button type="submit">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
   <!-- ===== STATIC HERO (PMI MATCH) ===== -->
-  <section class="pmi-hero"
-    style="position: relative; height: 85vh; min-height: 500px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; color: white; padding-bottom: 60px;">
+  <section class="pmi-hero" style="position: relative; height: 85vh; min-height: 500px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; color: white; padding-bottom: 60px;">
     <!-- Background image -->
     <div style="position: absolute; inset: 0; z-index: 1;">
       <img src="images/hero_factory.png" alt="Hero Background" style="width: 100%; height: 100%; object-fit: cover;">
       <!-- Dark Overlay -->
-      <div
-        style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11, 58, 102, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);">
+      <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(11, 58, 102, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);">
       </div>
     </div>
 
     <!-- Hero CTA - bottom aligned -->
     <div class="container" style="position: relative; z-index: 2; padding: 0 20px;">
-      <a href="authority.html" class="btn"
-        style="background-color: var(--clr-accent); color: white; text-transform: uppercase; font-weight: 800; border-radius: 0; padding: 18px 48px; font-size: 16px; letter-spacing: 2px; display: inline-block; border: none; transition: all 0.3s; box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);"
-        onmouseover="this.style.backgroundColor='#ea6a0a'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 30px rgba(249, 115, 22, 0.5)'"
-        onmouseout="this.style.backgroundColor='var(--clr-accent)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(249, 115, 22, 0.4)'">
+      <a href="authority.html" class="btn" style="background-color: var(--clr-accent); color: white; text-transform: uppercase; font-weight: 800; border-radius: 0px; padding: 18px 48px; font-size: 16px; letter-spacing: 2px; display: inline-block; border: none; transition: 0.3s; box-shadow: rgba(249, 115, 22, 0.4) 0px 8px 24px; transform: translateY(0px);" onmouseover="this.style.backgroundColor='#ea6a0a'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 30px rgba(249, 115, 22, 0.5)'" onmouseout="this.style.backgroundColor='var(--clr-accent)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(249, 115, 22, 0.4)'">
         KHÁM PHÁ NĂNG LỰC SẢN XUẤT →
       </a>
     </div>
   </section>
 
   <!-- ===== CAPABILITY STRIP ===== -->
-  <section
-    style="display: flex; overflow: hidden; height: 100px; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: clamp(16px, 2vw, 24px); text-transform: uppercase; letter-spacing: 1px; color: white;">
-    <div
-      style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: url('images/hero-2.png'); background-size: cover; position: relative;">
+  <section style="display: flex; overflow: hidden; height: 100px; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: clamp(16px, 2vw, 24px); text-transform: uppercase; letter-spacing: 1px; color: white;">
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: url('images/hero-2.png'); background-size: cover; position: relative;">
       <div style="position: absolute; inset: 0; background-color: rgba(11, 58, 102, 0.85); z-index: 1;"></div>
       <span style="position: relative; z-index: 3;">SẢN XUẤT ĐỒNG PHỤC</span>
-      <div
-        style="position: absolute; right: -25px; top: 0; bottom: 0; width: 52px; background-color: rgba(11, 58, 102, 0.85); transform: skewX(-20deg); z-index: 2; border-right: 4px solid white;">
+      <div style="position: absolute; right: -25px; top: 0; bottom: 0; width: 52px; background-color: rgba(11, 58, 102, 0.85); transform: skewX(-20deg); z-index: 2; border-right: 4px solid white;">
       </div>
     </div>
-    <div
-      style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: url('images/hero-3.png'); background-size: cover; color: #0b3a66; position: relative;">
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: url('images/hero-3.png'); background-size: cover; color: #0b3a66; position: relative;">
       <div style="position: absolute; inset: 0; background-color: rgba(230, 230, 230, 0.9); z-index: 1;"></div>
-      <span style="position: relative; z-index: 3;">GIA CÔNG RẬP & MẪU</span>
-      <div
-        style="position: absolute; right: -25px; top: 0; bottom: 0; width: 52px; background-color: rgba(230, 230, 230, 0.9); transform: skewX(-20deg); z-index: 2; border-right: 4px solid white;">
+      <span style="position: relative; z-index: 3;">GIA CÔNG RẬP &amp; MẪU</span>
+      <div style="position: absolute; right: -25px; top: 0; bottom: 0; width: 52px; background-color: rgba(230, 230, 230, 0.9); transform: skewX(-20deg); z-index: 2; border-right: 4px solid white;">
       </div>
     </div>
-    <div
-      style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: url('images/hero-1.png'); background-size: cover; position: relative; z-index: 1;">
+    <div style="flex: 1; display: flex; align-items: center; justify-content: center; background-image: url('images/hero-1.png'); background-size: cover; position: relative; z-index: 1;">
       <div style="position: absolute; inset: 0; background-color: rgba(249, 115, 22, 0.85); z-index: 1;"></div>
       <span style="position: relative; z-index: 3;">CUNG CẤP VẢI SỈ</span>
     </div>
@@ -180,7 +338,7 @@
                 <img src="images/partner-tokai.svg" alt="Tokai Corp" class="hp-logo-img">
             </div>
             <div class="hp-logo-box">
-                <img src="images/partner-daiwa.svg" alt="Daiwa" class="hp-logo-img">
+                <img src="images/daiwa.png" alt="Daiwa" class="hp-logo-img">
             </div>
             <div class="hp-logo-box">
                 <img src="images/partner-foster.svg" alt="Foster" class="hp-logo-img">
@@ -221,45 +379,35 @@
 
 
   <!-- ===== SỨ MỆNH (VISUAL SPLIT) ===== -->
-  <section class="pmi-split"
-    style="display: flex; flex-wrap: wrap; background-color: var(--clr-primary); color: white;">
+  <section class="pmi-split" style="display: flex; flex-wrap: wrap; background-color: var(--clr-primary); color: white;">
     <!-- Left: Video Thumbnail -->
-    <div
-      style="flex: 1 1 50%; position: relative; min-height: 400px; background-image: url('images/hero-2.png'); background-size: cover; background-position: center;">
+    <div style="flex: 1 1 50%; position: relative; min-height: 400px; background-image: url('images/hero-2.png'); background-size: cover; background-position: center;">
       <!-- Play button overlay -->
-      <div
-        style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.2);">
-        <button aria-label="Play Video"
-          style="width: 80px; height: 60px; background-color: var(--clr-accent); border: none; border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s;">
+      <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background-color: rgba(0,0,0,0.2);">
+        <button aria-label="Play Video" style="width: 80px; height: 60px; background-color: var(--clr-accent); border: none; border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s;">
           <svg viewBox="0 0 24 24" width="36" height="36" fill="white">
-            <path d="M8 5v14l11-7z" />
+            <path d="M8 5v14l11-7z"></path>
           </svg>
         </button>
       </div>
     </div>
     <!-- Right: Content -->
-    <div
-      style="flex: 1 1 50%; padding: 80px 8%; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden;">
-      <h2
-        style="font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">
-        <span style="font-weight: 400; color: #94a3b8;">SỨ MỆNH CỦA</span> CHÚNG TÔI
-      </h2>
+    <div style="flex: 1 1 50%; padding: 80px 8%; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden;">
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 40px); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">
+        <span style="font-weight: 400; color: #94a3b8;">SỨ MỆNH CỦA chúng tôi</span></h2>
       <p style="font-size: 16px; line-height: 1.7; margin-bottom: 32px; max-width: 500px; color: #e2e8f0;">
         Điểm khác biệt của Dương Thành Tín là chúng tôi tập trung vào việc làm cho hoạt động cung ứng đồng phục doanh
         nghiệp trở nên dễ dàng và minh bạch hơn. Từ khâu chọn vải, rập sơ đồ đến sản xuất hàng loạt, chúng tôi hiện thực
         hóa tiêu chuẩn an toàn trong từng đường kim mũi chỉ.
       </p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="profile.html" class="btn"
-          style="background-color: transparent; border: 2px solid rgba(255,255,255,0.6); color: white; text-transform: uppercase; font-weight: 700; padding: 14px 28px; border-radius: 0; letter-spacing: 1px;">VỀ
+        <a href="profile.html" class="btn" style="background-color: transparent; border: 2px solid rgba(255,255,255,0.6); color: white; text-transform: uppercase; font-weight: 700; padding: 14px 28px; border-radius: 0; letter-spacing: 1px;">VỀ
           CHÚNG TÔI</a>
-        <a href="contact.html" class="btn"
-          style="background-color: var(--clr-accent); color: white; text-transform: uppercase; font-weight: 700; border-radius: 0; padding: 14px 28px; border-radius: 0; letter-spacing: 1px; border: 2px solid var(--clr-accent);">LIÊN
+        <a href="contact.html" class="btn" style="background-color: var(--clr-accent); color: white; text-transform: uppercase; font-weight: 700; border-radius: 0; padding: 14px 28px; border-radius: 0; letter-spacing: 1px; border: 2px solid var(--clr-accent);">LIÊN
           HỆ NGAY</a>
       </div>
       <!-- Optional decorative shape (PMI style) -->
-      <img src="images/hero-1.png" alt=""
-        style="position: absolute; right: -50px; top: -50px; width: 200px; height: 200px; object-fit: cover; opacity: 0.1; filter: grayscale(100%); border-radius: 50%; mix-blend-mode: multiply; pointer-events: none;">
+      <img src="images/hero-1.png" alt="" style="position: absolute; right: -50px; top: -50px; width: 200px; height: 200px; object-fit: cover; opacity: 0.1; filter: grayscale(100%); border-radius: 50%; mix-blend-mode: multiply; pointer-events: none;">
     </div>
   </section>
 
@@ -345,8 +493,7 @@
       <div class="pmi-cat-divider" style="background-color: rgba(249, 115, 22, 0.9);"></div>
     </a>
     <!-- Item 3 -->
-    <a href="product.html" class="pmi-cat-item"
-      style="background-image: url('images/product-uniform.png'); z-index: 1;">
+    <a href="product.html" class="pmi-cat-item" style="background-image: url('images/product-uniform.png'); z-index: 1;">
       <div class="pmi-cat-overlay" style="background-color: rgba(11, 58, 102, 0.9);"></div>
       <div class="pmi-cat-text">
         ÁO THUN POLO<span class="pmi-cat-subtext">DOANH NGHIỆP</span>
@@ -527,15 +674,12 @@
     }
   </style>
 
-  <section class="strip-section bg-gray reveal reveal-up" id="process"
-    style="padding-top: 100px; padding-bottom: 100px;">
+  <section class="strip-section bg-gray reveal reveal-up visible" id="process" style="padding-top: 100px; padding-bottom: 100px;">
     <div class="container">
       <div class="section-header text-center" style="margin-bottom: 72px;">
-        <span class="section-label"
-          style="color: var(--clr-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Quy trình
+        <span class="section-label" style="color: var(--clr-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Quy trình
           SOP chuẩn</span>
-        <h2 class="section-title"
-          style="font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--clr-primary); text-transform: uppercase;">
+        <h2 class="section-title" style="font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--clr-primary); text-transform: uppercase;">
           4 BƯỚC GIA CÔNG KHÉP KÍN</h2>
         <p class="section-subtitle mx-auto" style="max-width: 580px;">Hệ thống quản lý đồng bộ — minh bạch tiến độ, kiểm
           soát chất lượng 100%, bàn giao đúng hạn cho mọi đơn hàng B2B.</p>
@@ -556,13 +700,13 @@
             <div class="proc-step__num">01</div>
           </div>
           <div class="proc-step__right">
-            <img class="proc-step__img" src="images/factory-1.png" alt="Tư vấn đồng phục" loading="lazy">
+            <img class="proc-step__img" src="images/unnamed.jpg" alt="Tư vấn đồng phục" loading="lazy">
           </div>
         </div>
         <!-- Step 2 -->
         <div class="proc-step">
           <div class="proc-step__left">
-            <img class="proc-step__img" src="images/factory-2.png" alt="Gia công rập mẫu" loading="lazy">
+            <img class="proc-step__img" src="images/unnamed (1).jpg" alt="Gia công rập mẫu" loading="lazy">
           </div>
           <div class="proc-step__center">
             <div class="proc-step__num">02</div>
@@ -590,13 +734,13 @@
             <div class="proc-step__num">03</div>
           </div>
           <div class="proc-step__right">
-            <img class="proc-step__img" src="images/factory-3.png" alt="Kiểm soát chất lượng" loading="lazy">
+            <img class="proc-step__img" src="images/xưởng may.jpg" alt="Kiểm soát chất lượng" loading="lazy">
           </div>
         </div>
         <!-- Step 4 -->
         <div class="proc-step">
           <div class="proc-step__left">
-            <img class="proc-step__img" src="images/factory-4.png" alt="Đóng gói bàn giao" loading="lazy">
+            <img class="proc-step__img" src="images/2188954d-6934-49cd-8014-84dde1326752.jpeg" alt="Đóng gói bàn giao" loading="lazy">
           </div>
           <div class="proc-step__center">
             <div class="proc-step__num">04</div>
@@ -615,13 +759,11 @@
   </section>
 
   <!-- ===== CASE STUDIES ===== -->
-  <section class="section bg-white reveal reveal-up" id="case-studies" style="padding: 100px 0; border-bottom: 1px solid #e2e8f0;">
+  <section class="section bg-white reveal reveal-up visible" id="case-studies" style="padding: 100px 0; border-bottom: 1px solid #e2e8f0;">
     <div class="container">
       <div class="section-header text-center" style="margin-bottom: 60px;">
-        <span class="section-label"
-          style="color: var(--clr-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Dự án tiêu biểu</span>
-        <h2 class="section-title"
-          style="font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--clr-primary); text-transform: uppercase;">
+        <span class="section-label" style="color: var(--clr-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Dự án tiêu biểu</span>
+        <h2 class="section-title" style="font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--clr-primary); text-transform: uppercase;">
           CASE STUDY TRIỂN KHAI THỰC TẾ</h2>
         <p class="section-subtitle mx-auto" style="max-width: 600px;">Những giải pháp đồng phục chuyên biệt được chúng tôi thực hiện thành công cho các đối tác chiến lược.</p>
       </div>
@@ -629,7 +771,7 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
         <!-- Card Daiwa -->
         <div style="background: var(--clr-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
-            <img src="images/daiwa_real.jpg" alt="Daiwa Case Study" style="width: 100%; height: 220px; object-fit: cover;">
+            <img src="images/dn14.jpg" alt="Daiwa Case Study" style="width: 100%; height: 220px; object-fit: cover;">
             <div style="padding: 30px;">
                 <h3 style="font-family: 'Outfit'; font-size: 20px; font-weight: 700; color: var(--clr-primary); margin-bottom: 12px; text-transform: uppercase;">Triển Khai Đồng Phục Kỹ Thuật Daiwa</h3>
                 <p style="color: var(--clr-text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">Sản xuất 1.500 áo bảo hộ chống tĩnh điện màng ESD cao cấp, đáp ứng tiêu chuẩn nghiêm ngặt của nhà máy sản xuất cần câu cá Nhật Bản Daiwa tại Đà Nẵng.</p>
@@ -642,9 +784,9 @@
         
         <!-- Card Foster -->
         <div style="background: var(--clr-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
-            <img src="images/foster_real.jpg" alt="Foster Case Study" style="width: 100%; height: 220px; object-fit: cover;">
+            <img src="images/foster.jpg" alt="Foster Case Study" style="width: 100%; height: 220px; object-fit: cover;">
             <div style="padding: 30px;">
-                <h3 style="font-family: 'Outfit'; font-size: 20px; font-weight: 700; color: var(--clr-primary); margin-bottom: 12px; text-transform: uppercase;">Đồng Phục Dây Chuyền Foster</h3>
+                <h3 style="font-family: 'Outfit'; font-size: 20px; font-weight: 700; color: var(--clr-primary); margin-bottom: 12px; text-transform: uppercase;">Đồng Phục nhà máy Foster</h3>
                 <p style="color: var(--clr-text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">Cung ứng liên tục 3.000+ bộ quần áo bảo hộ linh kiện điện tử mỗi năm. Tối ưu thiết kế túi tiện dụng và form dáng thoải mái cho công nhân viên Foster.</p>
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                     <span style="background: rgba(249, 115, 22, 0.1); color: var(--clr-accent); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#ĐiệnTử</span>
@@ -655,13 +797,13 @@
         
         <!-- Card SunGroup / Others -->
         <div style="background: var(--clr-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
-            <img src="images/resort_real.jpg" alt="Hospitality Case Study" style="width: 100%; height: 220px; object-fit: cover;">
+            <img src="images/tokai.jpeg" alt="Hospitality Case Study" style="width: 100%; height: 220px; object-fit: cover;">
             <div style="padding: 30px;">
-                <h3 style="font-family: 'Outfit'; font-size: 20px; font-weight: 700; color: var(--clr-primary); margin-bottom: 12px; text-transform: uppercase;">Dự Án Áo Polo Sự Kiện Resort</h3>
-                <p style="color: var(--clr-text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;">Thiết kế và dệt nhuộm màu vải riêng biệt theo nhận diện thương hiệu cho chuỗi resort cao cấp. Cam kết màu sắc ổn định xuyên suốt các lô hàng qua nhiều năm.</p>
+                <h3 style="font-family: 'Outfit'; font-size: 20px; font-weight: 700; color: var(--clr-primary); margin-bottom: 12px; text-transform: uppercase;">Đồng Phục Công Nhân ToKai</h3>
+                <p style="color: var(--clr-text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6;"><div class="flex max-w-full flex-col gap-4 grow"><div data-message-author-role="assistant" data-message-id="8feb2069-35a4-4c80-80f4-367a156fd68f" dir="auto" data-message-model-slug="gpt-5-3" class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-1"><div class="flex w-full flex-col gap-1 empty:hidden"><div class="markdown prose dark:prose-invert w-full wrap-break-word light markdown-new-styling"><p data-start="0" data-end="250" data-is-last-node="" data-is-only-node="">Dự án sản xuất 1.000 bộ đồng phục công nhân Dokai được triển khai với quy trình tối ưu, đảm bảo đồng bộ 100% về form dáng và màu sắc, hoàn thiện trong thời gian ngắn, đáp ứng tiêu chuẩn độ bền cao và sự thoải mái cho môi trường làm việc cường độ lớn.</p></div></div></div></div><div class="z-0 flex min-h-[46px] justify-start"></div><div class="mt-3 w-full empty:hidden"><div class="text-center"><div class="inline-flex border border-gray-100 dark:border-gray-700 rounded-xl"><div class="bg-token-main-surface-tertiary w-px flex-1 self-stretch"></div></div></div></div></p>
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <span style="background: rgba(8, 148, 161, 0.1); color: #0894a1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#ÁoPolo</span>
-                    <span style="background: rgba(8, 148, 161, 0.1); color: #0894a1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#MàuThươngHiệu</span>
+                    <span style="background: rgba(8, 148, 161, 0.1); color: #0894a1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#Nhà Máy</span>
+                    <span style="background: rgba(8, 148, 161, 0.1); color: #0894a1; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">#Sản xuẩt</span>
                 </div>
             </div>
         </div>
@@ -784,18 +926,16 @@
     }
   </style>
 
-  <section class="section fade-on-scroll" id="testimonials" style="padding: 100px 0; background-color: #0c1524; position: relative;">
+  <section class="section fade-on-scroll fade-in-up visible" id="testimonials" style="padding: 100px 0; background-color: #0c1524; position: relative;">
     <!-- Background grid decoration -->
     <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.5;"></div>
     
     <div class="container" style="position: relative; z-index: 2;">
       <div class="section-header text-center" style="margin-bottom: 80px;">
-        <span class="section-label"
-          style="display: inline-block; background: rgba(249, 115, 22, 0.15); color: var(--clr-accent-light); padding: 8px 24px; border-radius: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+        <span class="section-label" style="display: inline-block; background: rgba(249, 115, 22, 0.15); color: var(--clr-accent-light); padding: 8px 24px; border-radius: 30px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
           Khách hàng B2B
         </span>
-        <h2 class="section-title"
-          style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 5vw, 48px); font-weight: 800; color: #ffffff; text-transform: uppercase;">
+        <h2 class="section-title" style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 5vw, 48px); font-weight: 800; color: #ffffff; text-transform: uppercase;">
           3.500+ DOANH NGHIỆP ĐÃ TIN TƯỞNG
         </h2>
         <p class="section-subtitle mx-auto" style="max-width: 600px; color: rgba(255, 255, 255, 0.7); font-size: 18px; line-height: 1.6;">
@@ -807,11 +947,11 @@
         <!-- Card 1 (featured) -->
         <div class="testi-card testi-card--featured">
           <div class="testi-card__stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
           </div>
           <p class="testi-card__quote">"Chúng tôi đặt 2.000 bộ đồng phục bảo hộ cho toàn bộ nhà máy. Dương Thành Tín
             giao đúng hạn, chất lượng đường may vượt kỳ vọng. Sai số size gần như bằng 0 — điều rất ít xưởng nào đạt
@@ -827,11 +967,11 @@
         <!-- Card 2 -->
         <div class="testi-card">
           <div class="testi-card__stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
           </div>
           <p class="testi-card__quote">"Quy trình đặt hàng rất chuyên nghiệp, từ tư vấn mẫu đến duyệt mẫu thực tế. Team
             hỗ trợ phản hồi nhanh, báo giá minh bạch. Chúng tôi đã đồng hành liên tục 3 năm."</p>
@@ -846,11 +986,11 @@
         <!-- Card 3 -->
         <div class="testi-card">
           <div class="testi-card__stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
           </div>
           <p class="testi-card__quote">"Đã thử 4–5 xưởng nhưng vẫn gặp chênh màu và co size sau giặt. Kể từ khi hợp tác
             với Dương Thành Tín thì sự cố đó không còn. Rất hài lòng về kiểm soát chất lượng màu vải."</p>
@@ -870,25 +1010,19 @@
 
   <!-- ===== VALUE PROPOSITION ===== -->
   <section class="pmi-value-prop" style="padding: 100px 20px; text-align: center; background-color: white;">
-    <div class="container"
-      style="display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap; max-width: 1000px;">
+    <div class="container" style="display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap; max-width: 1000px;">
       <div style="flex: 1 1 300px; text-align: left; position: relative;">
         <!-- geometric decoration -->
-        <div
-          style="position: absolute; top: -60px; left: -40px; width: 120px; height: 180px; background-color: #cbd5e1; clip-path: polygon(100% 0, 0 100%, 100% 100%); z-index: 1;">
+        <div style="position: absolute; top: -60px; left: -40px; width: 120px; height: 180px; background-color: #cbd5e1; clip-path: polygon(100% 0, 0 100%, 100% 100%); z-index: 1;">
         </div>
-        <div
-          style="position: absolute; top: 0px; left: 0px; width: 100px; height: 120px; background-color: var(--clr-primary); clip-path: polygon(0 0, 100% 100%, 0 100%); z-index: 2;">
+        <div style="position: absolute; top: 0px; left: 0px; width: 100px; height: 120px; background-color: var(--clr-primary); clip-path: polygon(0 0, 100% 100%, 0 100%); z-index: 2;">
         </div>
-        <div
-          style="position: absolute; top: 40px; left: 30px; width: 80px; height: 100px; background-color: var(--clr-accent); clip-path: polygon(100% 0, 0 0, 50% 100%); z-index: 3;">
+        <div style="position: absolute; top: 40px; left: 30px; width: 80px; height: 100px; background-color: var(--clr-accent); clip-path: polygon(100% 0, 0 0, 50% 100%); z-index: 3;">
         </div>
-        <img src="images/factory-1.png" alt=""
-          style="width: 100%; max-width: 400px; position: relative; z-index: 4; border-radius: 2px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);">
+        <img src="images/factory-1.png" alt="" style="width: 100%; max-width: 400px; position: relative; z-index: 4; border-radius: 2px; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);">
       </div>
       <div style="flex: 2 1 400px; text-align: left;">
-        <h2
-          style="font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 42px); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--clr-primary); margin-bottom: 24px; line-height: 1.1;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(28px, 4vw, 42px); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--clr-primary); margin-bottom: 24px; line-height: 1.1;">
           <span style="font-weight: 400; color: #64748b;">CHÚNG TÔI CÓ THỂ LÀM GÌ</span><br>CHO TỔ CHỨC CỦA BẠN?
         </h2>
         <p style="font-size: 16px; color: #475569; line-height: 1.7; margin-bottom: 24px;">
@@ -897,8 +1031,7 @@
           từng khách hàng.
         </p>
         <p style="font-size: 16px; color: #475569;">
-          Xem thêm về <a href="authority.html"
-            style="color: var(--clr-accent); font-weight: 700; text-decoration: underline;">chuyên môn kỹ thuật và quy
+          Xem thêm về <a href="authority.html" style="color: var(--clr-accent); font-weight: 700; text-decoration: underline;">chuyên môn kỹ thuật và quy
             trình kiểm định của chúng tôi</a>.
         </p>
       </div>
@@ -908,33 +1041,25 @@
   <!-- ===== DUAL CTA SECTION ===== -->
   <section class="pmi-dual-cta" style="display: flex; flex-wrap: wrap; min-height: 480px;">
     <!-- CTA 1: Request a Quote -->
-    <div
-      style="flex: 1 1 50%; padding: 80px 10%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; background-image: url('images/factory-1.png'); background-size: cover; background-position: center; color: white;">
+    <div style="flex: 1 1 50%; padding: 80px 10%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; background-image: url('images/factory-1.png'); background-size: cover; background-position: center; color: white;">
       <div style="position: absolute; inset: 0; background-color: rgba(15, 23, 42, 0.85); z-index: 1;"></div>
       <div style="position: relative; z-index: 2;">
-        <h2
-          style="font-family: 'Outfit', sans-serif; font-size: 32px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #ffffff;">
-          TƯ VẤN & BÁO GIÁ<br><span style="font-weight: 400; color: #f97316;">ĐỒNG PHỤC DOANH NGHIỆP</span></h2>
-        <p
-          style="font-size: 16px; line-height: 1.6; margin-bottom: 32px; color: #cbd5e1; max-width: 420px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 32px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #ffffff;">
+          TƯ VẤN &amp; BÁO GIÁ<br><span style="font-weight: 400; color: #f97316;">ĐỒNG PHỤC DOANH NGHIỆP</span></h2>
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 32px; color: #cbd5e1; max-width: 420px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif;">
           Chuyên gia của Dương Thành Tín sẵn sàng hỗ trợ bạn thiết kế và cung cấp giải pháp đồng phục tối ưu với ngân sách doanh nghiệp.</p>
-        <a href="contact.html" class="btn"
-          style="background-color: #f97316; color: white; border: none; text-transform: uppercase; font-weight: 800; border-radius: 4px; padding: 14px 40px; letter-spacing: 1.5px; box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);">NHẬN BÁO GIÁ NGAY</a>
+        <a href="contact.html" class="btn" style="background-color: #f97316; color: white; border: none; text-transform: uppercase; font-weight: 800; border-radius: 4px; padding: 14px 40px; letter-spacing: 1.5px; box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);">NHẬN BÁO GIÁ NGAY</a>
       </div>
     </div>
     <!-- CTA 2: Recruitment / Partners -->
-    <div
-      style="flex: 1 1 50%; padding: 80px 10%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; background-image: url('images/factory-2.png'); background-size: cover; background-position: center; color: white;">
+    <div style="flex: 1 1 50%; padding: 80px 10%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; background-image: url('images/factory-2.png'); background-size: cover; background-position: center; color: white;">
       <div style="position: absolute; inset: 0; background-color: rgba(11, 58, 102, 0.9); z-index: 1;"></div>
       <div style="position: relative; z-index: 2;">
-        <h2
-          style="font-family: 'Outfit', sans-serif; font-size: 32px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #ffffff;">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: 32px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #ffffff;">
           TRỞ THÀNH ĐỐI TÁC<br><span style="font-weight: 400; color: #38bdf8;">CHIẾN LƯỢC CỦA DTT</span></h2>
-        <p
-          style="font-size: 16px; line-height: 1.6; margin-bottom: 32px; color: #e0f2fe; max-width: 420px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif;">
+        <p style="font-size: 16px; line-height: 1.6; margin-bottom: 32px; color: #e0f2fe; max-width: 420px; margin-left: auto; margin-right: auto; font-family: 'Inter', sans-serif;">
           Chúng tôi luôn tìm kiếm cơ hội hợp tác xuất khẩu, gia công số lượng lớn và đại lý phân phối trên toàn quốc với chính sách minh bạch.</p>
-        <a href="contact.html" class="btn"
-          style="background-color: transparent; color: white; border: 2px solid #38bdf8; text-transform: uppercase; font-weight: 800; border-radius: 4px; padding: 14px 40px; letter-spacing: 1.5px; transition: all 0.3s;">KẾT NỐI HỢP TÁC</a>
+        <a href="contact.html" class="btn" style="background-color: transparent; color: white; border: 2px solid #38bdf8; text-transform: uppercase; font-weight: 800; border-radius: 4px; padding: 14px 40px; letter-spacing: 1.5px; transition: all 0.3s;">KẾT NỐI HỢP TÁC</a>
       </div>
     </div>
   </section>
@@ -948,8 +1073,7 @@
     <div class="pdf-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="capabilityModalTitle">
       <button class="pdf-modal__close" type="button" aria-label="Đóng" style="border-radius: 0;">
         <svg viewBox="0 0 24 24">
-          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
       </button>
 
@@ -964,7 +1088,7 @@
               <p class="book-cover-card__subtitle">Thông số máy móc, quy trình SOP, năng lực sản xuất cập nhật.</p>
             </div>
           </div>
-          <p class="book-cover-card__meta">Phiên bản 2026 &mdash; cập nhật theo dự án mới nhất.</p>
+          <p class="book-cover-card__meta">Phiên bản 2026 — cập nhật theo dự án mới nhất.</p>
         </aside>
 
         <!-- Right: Content + form (UI only) -->
@@ -1046,7 +1170,122 @@
   </div>
 
   <!-- ===== FOOTER ===== -->
-  <div id="footer-container"></div>
+  <footer class="footer-new">
+    <!-- Top Area: Brand & Newsletter -->
+    <div class="footer-top">
+        <div class="container footer-top__inner">
+            <div class="footer-top__brand">
+                <a href="index.html" class="footer-logo">DƯƠNG <span>THÀNH TÍN</span></a>
+                <p class="footer-slogan">Xưởng sản xuất đồng phục &amp; bảo hộ lao động chuyên nghiệp</p>
+            </div>
+            <div class="footer-top__newsletter">
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email nhận ưu đãi" required="" aria-label="Đăng ký email nhận ưu đãi">
+                    <button type="submit" class="btn-newsletter">Gửi tin cho tôi!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main 4-Column Area -->
+    <div class="footer-main">
+        <div class="container footer-grid">
+            <!-- Column 1: Thông tin liên hệ -->
+            <div class="footer-col footer-col--contact">
+                <h4 class="footer-heading">THÔNG TIN LIÊN HỆ</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span><strong>Địa chỉ:</strong> Khu gia đình quân nhân Bộ chỉ huy quân sự, Hòa Khánh Bắc, Liên Chiểu, Đà Nẵng 55200</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path>
+                        </svg>
+                        <span><strong>Số điện thoại:</strong> 0905 663 660</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span><strong>Giờ hoạt động:</strong> 8:00 – 17:30 (Thứ 2 – Thứ 7)</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span><strong>Tỉnh/Thành phố:</strong> Đà Nẵng</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Liên kết nhanh -->
+            <div class="footer-col">
+                <h4 class="footer-heading">LIÊN KẾT NHANH</h4>
+                <ul class="footer-links">
+                    <li><a href="profile.html">Về chúng tôi</a></li>
+                    <li><a href="category.html">Sản phẩm</a></li>
+                    <li><a href="blog.html">Tin tức</a></li>
+                    <li><a href="contact.html">Liên hệ &amp; Báo giá</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Thông tin hướng dẫn -->
+            <div class="footer-col">
+                <h4 class="footer-heading">THÔNG TIN HƯỚNG DẪN</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Quy trình đặt hàng B2B</a></li>
+                    <li><a href="#">Hướng dẫn chọn size</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Điều khoản bảo mật</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Kết nối & Tin cậy -->
+            <div class="footer-col footer-col--trust">
+                <h4 class="footer-heading">KẾT NỐI &amp; TIN CẬY</h4>
+                
+                <!-- Social -->
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook" class="social-link" title="Facebook">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                    </a>
+                    <a href="#" aria-label="Zalo" class="social-link" title="Zalo" style="background:#0068FF;">
+                        <span style="font-size: 11px; font-weight: bold; letter-spacing: 0.5px;">Zalo</span>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="social-link" title="YouTube">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33zM9.75 15.02V8.48l6.08 3.27-6.08 3.27z"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="footer-certs">
+                    <img src="images/bocongthuong.png" alt="Đã thông báo Bộ Công Thương" style="height:40px; border-radius:4px;">
+                    <img src="images/dmca.png" alt="DMCA Protected" style="height:40px; background:#fff; padding:4px; border-radius:4px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar (Copyright & Legals) -->
+    <div class="footer-bottom">
+        <div class="container footer-bottom__inner">
+            <p class="copyright">© 2026 DƯƠNG THÀNH TÍN. Toàn bộ nội dung đã được bảo hộ.</p>
+            <div class="footer-legal">
+                <a href="#">Bảo mật</a>
+                <span class="sep">|</span>
+                <a href="#">Hợp đồng mẫu</a>
+            </div>
+        </div>
+    </div>
+</footer>
   <!-- Schema Markup: LocalBusiness + Organization -->
   <script type="application/ld+json">
   {
@@ -1093,7 +1332,4 @@
   }
   </script>
 
-  <script src="script.js?v=1773746252487"></script>
-</body>
-
-</html>
+  <script src="script.js?v=1773746252487"></script></body></html>
